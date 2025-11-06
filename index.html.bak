@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>量子計算實驗室 Quantum Computing Lab</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- 保留原有的 vendor & main CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">量子計算實驗室</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#intro" class="active">首頁</a></li>
+          <li><a href="#quantum">量子計算</a></li>
+          <li><a href="#postquantum">後量子密碼</a></li>
+          <li><a href="#join">加入方式</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="intro" class="hero section">
+      <div class="container text-center" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2>清大 量子計算實驗室</h2>
+            <p>Quantum Computing Laboratory, NTHU</p>
+            <p>探索量子演算法、後量子密碼與量子資訊的未來。</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <img src="assets/img/quantum-hero.png" alt="Quantum Illustration" class="img-fluid">
+        </div>
+      </div>
+    </section>
+
+    <!-- Quantum Computing Section -->
+    <section id="quantum" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>量子計算介紹</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              量子計算利用量子疊加與糾纏原理，能在某些問題上大幅超越傳統電腦。
+              常見的演算法如 <strong>Shor’s algorithm</strong>（質因數分解）與
+              <strong>Grover’s algorithm</strong>（搜尋問題），展現了指數級與平方級的加速潛力。
+            </p>
+            <p>
+              實驗室研究方向包含：
+            </p>
+            <ul>
+              <li>變分量子演算法（VQE, QAOA）</li>
+              <li>量子模擬與錯誤校正</li>
+              <li>量子硬體模擬與雜訊分析</li>
+            </ul>
+            <div class="text-center mt-3">
+              <img src="assets/img/quantum-diagram.png" alt="Quantum Diagram" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post-Quantum Cryptography Section -->
+    <section id="postquantum" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>後量子密碼介紹</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              後量子密碼（Post-Quantum Cryptography, PQC）旨在設計可抵抗量子電腦攻擊的加密演算法。
+              在量子電腦出現後，傳統的 RSA 與 ECC 將不再安全，因此新的安全架構至關重要。
+            </p>
+            <p>
+              我們的研究聚焦於：
+            </p>
+            <ul>
+              <li>格基密碼（Lattice-based Cryptography）</li>
+              <li>雜湊基密碼（Hash-based Cryptography）</li>
+              <li>代碼基密碼與簽章系統</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>實驗室專題生加入方式</h3>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              實驗室歡迎有興趣的同學加入專題或研究計畫。無論是本科生、碩士生或博士生，都可以參與量子計算或後量子密碼研究。
+            </p>
+            <ol>
+              <li>瀏覽實驗室近期研究與論文。</li>
+              <li>準備履歷與成績單，寄至實驗室聯絡信箱。</li>
+              <li>安排面談與研究題目討論。</li>
+            </ol>
+            <p class="mt-3">
+              聯絡信箱：<a href="mailto:qlab@example.edu">qlab@example.edu</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="footer position-relative">
+    <div class="container text-center">
+      <p>© 2025 清大量子計算實驗室 Quantum Computing Lab, NTHU</p>
+    </div>
+  </footer>
+
+  <!-- 保留原有 vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

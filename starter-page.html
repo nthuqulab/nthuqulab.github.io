@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Qulab — 清大量子計算實驗室</title>
+
+  <!-- Favicons (保留原設定) -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet" />
+
+  <style>
+    /* 少量覆寫：讓首頁更像學術實驗室／清爽風格 */
+    body { font-family: "Roboto", system-ui, -apple-system, "Segoe UI", "Noto Sans TC", "Helvetica Neue", Arial; background: #fafafa; color: #222; }
+    .sitename { font-weight:700; letter-spacing:1px; }
+    header.header { background: #ffffffcc; backdrop-filter: blur(4px); }
+    .hero { padding: 80px 0; }
+    .hero-left { padding-right: 3rem; }
+    .hero-title { font-size: 2.2rem; font-weight:700; margin-bottom: 0.5rem; }
+    .hero-sub { color: #555; margin-bottom: 1.25rem; }
+    .feature-list-compact { list-style:none; padding-left:0; margin:0; }
+    .feature-list-compact li { padding:0.35rem 0; border-bottom: 1px solid #eee; color:#333; }
+    .join-steps { list-style:none; padding-left:0; }
+    .join-steps li { margin: 0.5rem 0; }
+    /* 適度讓圖片置中並不會出現人物或文字 */
+    .hero-visual img { max-width:100%; display:block; margin:0 auto; }
+    footer.footer { padding:2rem 0; background:#0f1720; color:#ddd; }
+    .section-badge { font-size:0.75rem; color:#0a58ca; font-weight:600; }
+    @media (min-width: 992px) {
+      .hero-title { font-size: 2.6rem; }
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename mb-0">Qulab</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul class="d-flex gap-3 align-items-center mb-0">
+          <li><a href="#hero" class="active">首頁</a></li>
+          <li><a href="#about">關於</a></li>
+          <li><a href="#research">研究主題</a></li>
+          <li><a href="#join">加入我們</a></li>
+          <li><a href="#contact">聯絡</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero (簡潔、量子主題) -->
+    <section id="hero" class="hero section">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-6 hero-left" data-aos="fade-right" data-aos-delay="100">
+            <span class="section-badge">清大 · 量子計算實驗室</span>
+            <h1 class="hero-title">量子計算 • 後量子密碼 • 實驗與應用</h1>
+            <p class="hero-sub">本實驗室專注於量子演算法、量子硬體模擬與後量子密碼學研究，歡迎有興趣的同學與合作機構加入。</p>
+
+            <div class="mt-4 mb-3">
+              <a href="#research" class="btn btn-primary me-2">研究主題</a>
+              <a href="#join" class="btn btn-outline-secondary">如何加入</a>
+            </div>
+
+            <div class="mt-4">
+              <h6 class="mb-2">快速導覽</h6>
+              <ul class="feature-list-compact">
+                <li>量子演算法（Grover、Shor、變分量子演算法）</li>
+                <li>後量子密碼：格基、哈希基、編碼基方案</li>
+                <li>量子模擬與噪聲分析</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 hero-right" data-aos="fade-left" data-aos-delay="200">
+            <!-- 請放無人物、無文字的量子插畫檔 -->
+            <!-- 建議檔名: assets/img/quantum-hero.png -->
+            <div class="hero-visual">
+              <img src="assets/img/quantum-hero.png" alt="Quantum illustration" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Hero -->
+
+    <!-- About -->
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <h2>關於我們</h2>
+            <p class="lead-text">清大量子計算實驗室致力於研究量子演算法、量子資訊理論與後量子密碼。團隊成員包含教授、研究助理與研究生，並與產業緊密合作。</p>
+
+            <p>我們的目標是將理論推向實作，開發可在近常規量子硬體上運行的演算法，並評估其在真實噪聲環境中的效能。</p>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="150">
+            <img src="assets/img/quantum-diagram.png" alt="Quantum diagram" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section><!-- /About -->
+
+    <!-- Research -->
+    <section id="research" class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header mb-4">
+          <h3>研究主題</h3>
+          <p>我們目前的研究方向</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 p-3">
+              <h5>量子演算法</h5>
+              <p>設計與分析針對組合優化與搜尋問題的量子演算法（VQE、QAOA、Grover 等）。</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="card h-100 p-3">
+              <h5>量子硬體與模擬</h5>
+              <p>針對中尺度量子系統進行噪聲模型建構與模擬，評估演算法在真實裝置上的表現。</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 p-3">
+              <h5>後量子密碼學</h5>
+              <p>研究抗量子攻擊的密碼學建構與效率評估（格基、哈希基、代碼基方案）。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Join -->
+    <section id="join" class="section light-background">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <h3>實驗室專題生／加入方式</h3>
+            <p>歡迎本科／碩博生申請專題或研究助理。</p>
+            <ol class="join-steps">
+              <li><strong>Step 1</strong>：瀏覽我們近期論文與專題（Research）</li>
+              <li><strong>Step 2</strong>：準備 CV 與成績單寄至實驗室信箱</li>
+              <li><strong>Step 3</strong>：與指導教授或助理面談、討論研究題目</li>
+            </ol>
+            <p class="mt-3">若有問題，請聯絡我們。面談後若合適會安排實驗室參訪與配案。</p>
+          </div>
+
+          <div class="col-lg-5 offset-lg-1" data-aos="fade-left" data-aos-delay="150">
+            <div class="card p-3">
+              <h5>聯絡資訊</h5>
+              <p>電子郵件：<a href="mailto:qlab@example.edu">qlab@example.edu</a></p>
+              <p>地址：國立清華大學（範例）</p>
+              <a href="#contact" class="btn btn-outline-primary mt-2">聯絡我們</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h3>想合作或詢問研究？</h3>
+            <p>請透過電子郵件與我們聯絡，我們會在收到後回覆。</p>
+            <a class="btn btn-primary" href="mailto:qlab@example.edu">寫信給我們</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container text-center">
+      <p class="mb-1">© <strong>Qulab</strong> • 國立清華大學 — All rights reserved.</p>
+      <small>示範網頁，請替換為實際聯絡資訊與授權聲明。</small>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files (保留) -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // 啟動 AOS（動畫）
+    AOS && AOS.init({ duration: 700, once: true });
+
+    // 簡單的 mobile-nav toggle（保留原本 template 的行為）
+    document.addEventListener('click', function (e) {
+      const t = e.target;
+      if (t.classList && t.classList.contains('mobile-nav-toggle')) {
+        document.getElementById('navmenu').classList.toggle('mobile-nav-open');
+      }
+    });
+  </script>
+</body>
+</html>
