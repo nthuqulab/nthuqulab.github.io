@@ -1867,7 +1867,7 @@ section,
   transform: scale(1.05);
 }
 
-.fields-2 .field-testimonial {
+.fields-2 .field-member {
   margin-top: 4rem;
   background-color: var(--surface-color);
   border-radius: 16px;
@@ -1875,20 +1875,20 @@ section,
   overflow: hidden;
 }
 
-.fields-2 .testimonial-image {
+.fields-2 .member-image {
   height: 100%;
 }
 
-.fields-2 .testimonial-image img {
+.fields-2 .member-image img {
   height: 100%;
   object-fit: cover;
 }
 
-.fields-2 .testimonial-content {
+.fields-2 .member-content {
   padding: 3rem;
 }
 
-.fields-2 .testimonial-content .quote-icon {
+.fields-2 .member-content .quote-icon {
   width: 60px;
   height: 60px;
   display: flex;
@@ -1901,7 +1901,7 @@ section,
   margin-bottom: 1.5rem;
 }
 
-.fields-2 .testimonial-content p {
+.fields-2 .member-content p {
   font-size: 1.25rem;
   font-style: italic;
   line-height: 1.7;
@@ -1909,13 +1909,13 @@ section,
   color: var(--heading-color);
 }
 
-.fields-2 .testimonial-content .testimonial-author h4 {
+.fields-2 .member-content .member-author h4 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
 }
 
-.fields-2 .testimonial-content .testimonial-author span {
+.fields-2 .member-content .member-author span {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 0.95rem;
 }
@@ -1926,38 +1926,38 @@ section,
     padding: 2rem;
   }
 
-  .fields-2 .testimonial-content {
+  .fields-2 .member-content {
     padding: 2rem;
     text-align: center;
   }
 
-  .fields-2 .testimonial-content .quote-icon {
+  .fields-2 .member-content .quote-icon {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media (max-width: 767px) {
-  .fields-2 .field-testimonial {
+  .fields-2 .field-member {
     margin-top: 2rem;
   }
 
-  .fields-2 .testimonial-image {
+  .fields-2 .member-image {
     max-height: 300px;
     overflow: hidden;
   }
 
-  .fields-2 .testimonial-image img {
+  .fields-2 .member-image img {
     width: 100%;
     height: 300px;
     object-fit: cover;
   }
 
-  .fields-2 .testimonial-content {
+  .fields-2 .member-content {
     padding: 1.5rem;
   }
 
-  .fields-2 .testimonial-content p {
+  .fields-2 .member-content p {
     font-size: 1.1rem;
   }
 }
@@ -2203,16 +2203,16 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Testimonials Section
+# Members Section
 --------------------------------------------------------------*/
-.testimonials .testimonial-masonry {
+.members .member-masonry {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   position: relative;
 }
 
-.testimonials .testimonial-masonry::before {
+.members .member-masonry::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -2222,28 +2222,28 @@ section,
   z-index: -1;
 }
 
-.testimonials .testimonial-item:nth-child(3n-1) {
+.members .member-item:nth-child(3n-1) {
   margin-top: 3rem;
 }
 
-.testimonials .testimonial-item:nth-child(3n) {
+.members .member-item:nth-child(3n) {
   margin-top: 1.5rem;
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content {
+.members .member-item.highlight .member-content {
   background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern {
+.members .member-item.highlight .member-content .quote-pattern {
   background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
-.testimonials .testimonial-item.highlight .testimonial-content .quote-pattern i {
+.members .member-item.highlight .member-content .quote-pattern i {
   color: var(--accent-color);
 }
 
-.testimonials .testimonial-content {
+.members .member-content {
   background-color: var(--surface-color);
   border-radius: 20px;
   padding: 2rem;
@@ -2252,18 +2252,18 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.testimonials .testimonial-content:hover {
+.members .member-content:hover {
   transform: translateY(-5px);
 }
 
-.testimonials .testimonial-content p {
+.members .member-content p {
   font-size: 1rem;
   line-height: 1.7;
   margin: 1.5rem 0;
   position: relative;
 }
 
-.testimonials .quote-pattern {
+.members .quote-pattern {
   position: absolute;
   top: -1.25rem;
   left: 2rem;
@@ -2277,12 +2277,12 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.testimonials .quote-pattern i {
+.members .quote-pattern i {
   font-size: 1.25rem;
   color: var(--accent-color);
 }
 
-.testimonials .client-info {
+.members .client-info {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -2291,7 +2291,7 @@ section,
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.testimonials .client-image {
+.members .client-image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -2299,82 +2299,82 @@ section,
   flex-shrink: 0;
 }
 
-.testimonials .client-image img {
+.members .client-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.testimonials .client-details h3 {
+.members .client-details h3 {
   font-size: 1.125rem;
   margin-bottom: 0.25rem;
 }
 
-.testimonials .client-details .position {
+.members .client-details .position {
   font-size: 0.875rem;
   color: color-mix(in srgb, var(--heading-color), transparent 40%);
 }
 
 @media (max-width: 1199.98px) {
-  .testimonials .testimonial-masonry {
+  .members .member-masonry {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 
-  .testimonials .testimonial-item:nth-child(3n-1),
-  .testimonials .testimonial-item:nth-child(3n) {
+  .members .member-item:nth-child(3n-1),
+  .members .member-item:nth-child(3n) {
     margin-top: 0;
   }
 
-  .testimonials .testimonial-item:nth-child(even) {
+  .members .member-item:nth-child(even) {
     margin-top: 2rem;
   }
 }
 
 @media (max-width: 767.98px) {
-  .testimonials .testimonial-masonry {
+  .members .member-masonry {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
-  .testimonials .testimonial-item:nth-child(even) {
+  .members .member-item:nth-child(even) {
     margin-top: 0;
   }
 
-  .testimonials .testimonial-content {
+  .members .member-content {
     padding: 1.5rem;
   }
 
-  .testimonials .testimonial-content p {
+  .members .member-content p {
     font-size: 0.9375rem;
     margin: 1.25rem 0;
   }
 
-  .testimonials .quote-pattern {
+  .members .quote-pattern {
     width: 2.25rem;
     height: 2.25rem;
     top: -1.125rem;
   }
 
-  .testimonials .quote-pattern i {
+  .members .quote-pattern i {
     font-size: 1.125rem;
   }
 
-  .testimonials .client-info {
+  .members .client-info {
     margin-top: 1.25rem;
     padding-top: 1.25rem;
   }
 
-  .testimonials .client-image {
+  .members .client-image {
     width: 45px;
     height: 45px;
   }
 
-  .testimonials .client-details h3 {
+  .members .client-details h3 {
     font-size: 1rem;
   }
 
-  .testimonials .client-details .position {
+  .members .client-details .position {
     font-size: 0.8125rem;
   }
 }
@@ -3780,7 +3780,7 @@ section,
   font-size: 14px;
 }
 
-.service-details .service-sidebar .testimonial-card {
+.service-details .service-sidebar .member-card {
   background-color: var(--surface-color);
   border-radius: 15px;
   padding: 30px;
@@ -3788,43 +3788,43 @@ section,
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header {
+.service-details .service-sidebar .member-card .member-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header i {
+.service-details .service-sidebar .member-card .member-header i {
   font-size: 36px;
   color: var(--accent-color);
   opacity: 0.3;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header .rating {
+.service-details .service-sidebar .member-card .member-header .rating {
   display: flex;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-header .rating i {
+.service-details .service-sidebar .member-card .member-header .rating i {
   color: #FFD700;
   font-size: 16px;
   opacity: 1;
   margin-left: 2px;
 }
 
-.service-details .service-sidebar .testimonial-card .testimonial-text {
+.service-details .service-sidebar .member-card .member-text {
   font-style: italic;
   line-height: 1.7;
   margin-bottom: 20px;
   color: color-mix(in srgb, var(--default-color), transparent 15%);
 }
 
-.service-details .service-sidebar .testimonial-card .client-info {
+.service-details .service-sidebar .member-card .client-info {
   display: flex;
   align-items: center;
 }
 
-.service-details .service-sidebar .testimonial-card .client-info .client-image {
+.service-details .service-sidebar .member-card .client-info .client-image {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -3832,13 +3832,13 @@ section,
   margin-right: 15px;
 }
 
-.service-details .service-sidebar .testimonial-card .client-info .client-details h5 {
+.service-details .service-sidebar .member-card .client-info .client-details h5 {
   font-size: 16px;
   font-weight: 700;
   margin: 0 0 5px;
 }
 
-.service-details .service-sidebar .testimonial-card .client-info .client-details span {
+.service-details .service-sidebar .member-card .client-info .client-details span {
   font-size: 14px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
