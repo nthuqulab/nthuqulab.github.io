@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Qutum Lab 清大量子計算實驗室</title>
+  <title>[Loading...]</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,6 +27,15 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Research Section CSS -->
+  <link href="assets/css/research.css" rel="stylesheet">
+
+  <!-- Publications Section CSS -->
+  <link href="assets/css/publications.css" rel="stylesheet">
+
+  <!-- Contact Section CSS -->
+  <link href="assets/css/contact.css" rel="stylesheet">
+
   <!-- =======================================================
   * Template Name: Landify
   * Template URL: https://bootstrapmade.com/landify-bootstrap-landing-page-template/
@@ -43,40 +52,23 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Qulab</h1>
+        <h1 class="sitename">[Logo]</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#fields">Fields</a></li>
-          <li><a href="#services">Services</a></li>
-          <!-- <li><a href="#pricing">Pricing</a></li> -->
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
-          <li><a href="#contact">Contact</a></li>
+          <!-- Navigation items loaded dynamically -->
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <!-- <a class="btn-getstarted" href="index.html#about">Get Started</a> -->
+      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+        <span class="lang-text">中文</span>
+      </button>
+
+      <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="bi bi-moon-fill"></i>
+      </button>
 
     </div>
   </header>
@@ -92,29 +84,11 @@
 
           <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
             <div class="hero-content">
-              <h1 class="hero-title">Welcome to <i class="text-primary">Quantum Lab</i></h1>
-              <p class="hero-description">Quantum Lab was established in 2020 at Department of Computer Science, National Tsing Hua University, Taiwan. Our research areas include quantum complexity, pseudorandom unitary, quantum optimization, and post quantum crytography.</p>
+              <h1 class="hero-title">[Hero Title]</h1>
+              <p class="hero-description">[Hero Description]</p>
               <div class="hero-actions">
-                <a href="#about" class="btn-primary">About Us</a>
-                <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn-secondary glightbox">
-                  <i class="bi bi-play-circle"></i>
-                  <span>Watch Our Story</span>
-                </a> -->
+                <!-- Action buttons loaded dynamically -->
               </div>
-              <!-- <div class="hero-stats">
-                <div class="stat-item">
-                  <span class="stat-number">150+</span>
-                  <span class="stat-label">Projects Completed</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">98%</span>
-                  <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number">24/7</span>
-                  <span class="stat-label">Support Available</span>
-                </div>
-              </div> -->
             </div>
           </div>
 
@@ -123,18 +97,7 @@
               <div class="hero-image-wrapper">
                 <img src="assets/img/frontcover.png" class="img-fluid hero-image" alt="Hero Image">
                 <div class="floating-elements">
-                  <div class="floating-card card-1">
-                    <i class="bi bi-lightbulb"></i>
-                    <span>Innovation</span>
-                  </div>
-                  <div class="floating-card card-2">
-                    <i class="bi bi-award"></i>
-                    <span>Excellence</span>
-                  </div>
-                  <div class="floating-card card-3">
-                    <i class="bi bi-people"></i>
-                    <span>Collaboration</span>
-                  </div>
+                  <!-- Floating cards loaded dynamically -->
                 </div>
               </div>
             </div>
@@ -151,105 +114,16 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-5">
-
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="content-wrapper">
-              <div class="section-header">
-                <span class="section-badge">ABOUT OUR LAB</span>
-                <h2>What we are doing</h2>
-              </div>
-
-              <p class="lead-text">We study the latest quantum computing technologies — analyzing, improving, and applying them.</p>
-
-              <p class="description-text">Quantum computing uses the principles of quantum mechanics—like superposition and entanglement—to process information with qubits that can represent multiple states at once. This allows it to tackle certain problems, such as factoring or molecular simulation, much faster than classical computers. Although current quantum machines are still limited by noise and scalability, ongoing research aims to build error-corrected systems capable of achieving true quantum advantage.</p>
-
-              <!-- <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number">250+</div>
-                  <div class="stat-label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">98%</div>
-                  <div class="stat-label">Client Satisfaction</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">24/7</div>
-                  <div class="stat-label">Support Available</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number">12+</div>
-                  <div class="stat-label">Years Experience</div>
-                </div>
-              </div> -->
-            </div>
+        <div class="content-wrapper" data-aos="fade-up" data-aos-delay="200">
+          <div class="section-header">
+            <span class="section-badge">[Section Badge]</span>
+            <h2>[About Title]</h2>
           </div>
 
-          <!-- <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="visual-section">
-              <div class="main-image-container">
-                <img src="assets/img/about/about-8.webp" alt="Professional team collaboration" class="img-fluid main-visual">
-                <div class="overlay-card">
-                  <div class="card-content">
-                    <h4>Quality First</h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
-                    <div class="card-icon">
-                      <i class="bi bi-award-fill"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <p class="lead-text">[Lead Text]</p>
 
-              <div class="secondary-images">
-                <div class="row g-3">
-                  <div class="col-6">
-                    <img src="assets/img/about/about-11.webp" alt="Team meeting" class="img-fluid secondary-img">
-                  </div>
-                  <div class="col-6">
-                    <img src="assets/img/about/about-5.webp" alt="Office workspace" class="img-fluid secondary-img">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
+          <p class="description-text">[Description Text]</p>
         </div>
-
-        <!-- <div class="row mt-5">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="400">
-            <div class="fields-section">
-              <div class="row gy-4">
-                <div class="col-md-4">
-                  <div class="field-box">
-                    <div class="field-icon">
-                      <i class="bi bi-shield-check"></i>
-                    </div>
-                    <h5>Trusted Security</h5>
-                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="field-box">
-                    <div class="field-icon">
-                      <i class="bi bi-lightning-charge"></i>
-                    </div>
-                    <h5>Fast Performance</h5>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.</p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="field-box">
-                    <div class="field-icon">
-                      <i class="bi bi-headset"></i>
-                    </div>
-                    <h5>Expert Support</h5>
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
 
       </div>
 
@@ -260,228 +134,21 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Fields</span>
-        <h2>Fields</h2>
-        <p>We specialize in various fields to deliver the best solutions.</p>
+        <span class="description-title">[Fields]</span>
+        <h2>[Fields]</h2>
+        <p>[Fields Description]</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="tabs-wrapper">
           <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-
-            <li class="nav-item">
-              <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#fields-tab-1">
-                <div class="tab-icon">
-                  <i class="bi bi-diagram-3"></i>
-                </div>
-                <div class="tab-content">
-                  <h5>Complexity</h5>
-                  <span>complexity study on state-of-the-art systems</span>
-                </div>
-              </a>
-            </li><!-- End tab nav item -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fields-tab-2">
-                <div class="tab-icon">
-                  <i class="bi bi-sliders"></i>
-                </div>
-                <div class="tab-content">
-                  <h5>Optimization</h5>
-                  <span>optimization of quantum algorithms</span>
-                </div>
-              </a>
-            </li><!-- End tab nav item -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fields-tab-3">
-                <div class="tab-icon">
-                  <i class="bi bi-shuffle"></i>
-                </div>
-                <div class="tab-content">
-                  <h5>Random Unitary</h5>
-                  <span>pseudorandom unitary for quantum computing</span>
-                </div>
-              </a>
-            </li><!-- End tab nav item -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="tab" data-bs-target="#fields-tab-4">
-                <div class="tab-icon">
-                  <i class="bi bi-shield-lock"></i>
-                </div>
-                <div class="tab-content">
-                  <h5>Cryptography</h5>
-                  <span>cryptography and secure communication</span>
-                </div>
-              </a>
-            </li><!-- End tab nav item -->
-
+            <!-- Field tabs loaded dynamically -->
           </ul>
 
           <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="tab-pane fade active show" id="fields-tab-1">
-              <div class="row align-items-center">
-
-                <div class="col-lg-5">
-                  <div class="content-wrapper">
-                    <div class="icon-badge">
-                      <i class="bi bi-diagram-3"></i>
-                    </div>
-                    <h3>Quantum Complexity</h3>
-                    <p>We study the complexity of state-of-the-art quantum systems, analyzing how algorithms can be solved under current resources such as higher error rate or restricted depth. Understanding computational complexity helps us identify which problems can benefit most from quantum acceleration.</p>
-
-                    <!-- <div class="field-grid">
-                      <div class="field-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Excepteur sint occaecat cupidatat non proident</span>
-                      </div>
-                      <div class="field-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Sunt in culpa qui officia deserunt mollit anim</span>
-                      </div>
-                      <div class="field-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>At vero eos et accusamus et iusto odio</span>
-                      </div>
-                      <div class="field-item">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Et harum quidem rerum facilis est et expedita</span>
-                      </div>
-                    </div>
-
-                    <div class="stats-row">
-                      <div class="stat-item">
-                        <div class="stat-number">99%</div>
-                        <div class="stat-label">Uptime</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number">50K+</div>
-                        <div class="stat-label">Users</div>
-                      </div>
-                      <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Support</div>
-                      </div>
-                    </div>
-
-                    <a href="#" class="btn-primary">Learn More <i class="bi bi-arrow-right"></i></a> -->
-                  </div>
-                </div>
-
-                <div class="col-lg-7">
-                  <div class="visual-content">
-                    <div class="main-image">
-                      <img src="assets/img/fields/fields-4.webp" alt="" class="img-fluid">
-                      <div class="floating-card">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <div class="card-content">
-                          <span>Performance</span>
-                          <strong>+85% Improvement</strong>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div><!-- End tab content item -->
-
-            <div class="tab-pane fade" id="fields-tab-2">
-              <div class="row align-items-center">
-
-                  <div class="col-lg-5">
-                    <div class="content-wrapper">
-                      <div class="icon-badge">
-                        <i class="bi bi-sliders"></i>
-                      </div>
-                      <h3>Optimization</h3>
-                      <p>Our research focuses on optimizing quantum algorithms and circuits to reduce error rates, improve efficiency, and minimize resource usage. This involves both theoretical methods and practical implementation strategies to make quantum solutions more reliable and scalable.</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-7">
-                    <div class="visual-content">
-                      <div class="main-image">
-                        <img src="assets/img/fields/fields-2.webp" alt="Quantum optimization visual" class="img-fluid">
-                        <div class="floating-card">
-                          <i class="bi bi-gear-fill"></i>
-                          <div class="card-content">
-                            <span>Efficiency</span>
-                            <strong>Resource Reduction</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="fields-tab-3">
-                <div class="row align-items-center">
-
-                  <div class="col-lg-5">
-                    <div class="content-wrapper">
-                      <div class="icon-badge">
-                        <i class="bi bi-shuffle"></i>
-                      </div>
-                      <h3>Random Unitary</h3>
-                      <p>We explore pseudorandom unitary operations, essential for simulating complex quantum dynamics and benchmarking devices. These operations help test randomness, entanglement, and information scrambling in quantum systems.</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-7">
-                    <div class="visual-content">
-                      <div class="main-image">
-                        <img src="assets/img/fields/fields-6.webp" alt="Pseudorandom unitary visual" class="img-fluid">
-                        <div class="floating-card">
-                          <i class="bi bi-dice-6-fill"></i>
-                          <div class="card-content">
-                            <span>Randomness</span>
-                            <strong>Device Benchmarks</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="fields-tab-4">
-                <div class="row align-items-center">
-
-                  <div class="col-lg-5">
-                    <div class="content-wrapper">
-                      <div class="icon-badge">
-                        <i class="bi bi-shield-lock"></i>
-                      </div>
-                      <h3>Cryptography</h3>
-                      <p>We investigate quantum cryptography and secure communication protocols, such as quantum key distribution and post-quantum encryption. Our goal is to ensure data security in a future where quantum computers can break classical cryptosystems.</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-7">
-                    <div class="visual-content">
-                      <div class="main-image">
-                        <img src="assets/img/fields/fields-1.webp" alt="Quantum cryptography visual" class="img-fluid">
-                        <div class="floating-card">
-                          <i class="bi bi-key-fill"></i>
-                          <div class="card-content">
-                            <span>Security</span>
-                            <strong>Post-Quantum Safe</strong>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div><!-- End tab content item -->
+            <!-- Tab content panels loaded dynamically -->
+          </div>
           </div>
         </div>
 
@@ -494,130 +161,29 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Members</span>
-        <h2>Members</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">[Members]</span>
+        <h2>[Members]</h2>
+        <p>[Members Description]</p>
       </div><!-- End Section Title -->
 
       <div class="container">
 
         <div class="member-masonry">
-
-          <div class="member-item" data-aos="fade-up">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Implementing innovative strategies has revolutionized our approach to market challenges and competitive positioning.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Rachel Bennett</h3>
-                  <span class="position">Strategy Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="member-item highlight" data-aos="fade-up" data-aos-delay="100">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Exceptional service delivery and innovative solutions have transformed our business operations, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Daniel Morgan</h3>
-                  <span class="position">Chief Innovation Officer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="member-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Strategic partnership has enabled seamless digital transformation and operational excellence.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Emma Thompson</h3>
-                  <span class="position">Digital Lead</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="member-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Professional expertise and dedication have significantly improved our project delivery timelines and quality metrics.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Christopher Lee</h3>
-                  <span class="position">Technical Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="member-item highlight" data-aos="fade-up" data-aos-delay="400">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Collaborative approach and industry expertise have revolutionized our product development cycle, resulting in faster time-to-market and increased customer engagement levels.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-9.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Olivia Carter</h3>
-                  <span class="position">Product Manager</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="member-item" data-aos="fade-up" data-aos-delay="500">
-            <div class="member-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Innovative approach to user experience design has significantly enhanced our platform's engagement metrics and customer retention rates.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-13.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Nathan Brooks</h3>
-                  <span class="position">UX Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <!-- Member items loaded dynamically -->
         </div>
 
       </div>
 
     </section><!-- /Members Section -->
-    <!-- Faq Section -->
-    <section id="faq" class="faq section">
+    <!-- Student History Research Section -->
+    <section id="research" class="research section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="description-title">[Research]</span>
+        <h2>[Research Title]</h2>
+        <p>[Research Description]</p>
+      </div><!-- End Section Title -->
 
       <div class="container">
 
@@ -625,147 +191,133 @@
 
           <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="faq-container">
-
-              <div class="faq-item faq-active">
-                <h3>Non consectetur a erat nam at lectus urna duis?</h3>
-                <div class="faq-content">
-                  <p>Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Feugiat scelerisque varius morbi enim nunc faucibus?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Dolor sit amet consectetur adipiscing elit pellentesque?</h3>
-                <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</h3>
-                <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Tempus quam pellentesque nec nam aliquam sem et tortor?</h3>
-                <div class="faq-content">
-                  <p>Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item">
-                <h3>Perspiciatis quod quo quos nulla quo illum ullam?</h3>
-                <div class="faq-content">
-                  <p>Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
+            <!-- Search Bar -->
+            <div class="research-search-wrapper">
+              <div class="research-search-box">
+                <i class="bi bi-search"></i>
+                <input
+                  type="text"
+                  id="research-search"
+                  class="research-search-input"
+                  placeholder="[Research Search Placeholder]"
+                  autocomplete="off"
+                >
+                <button id="research-clear" class="research-clear-btn" style="display: none;">
+                  <i class="bi bi-x-circle"></i>
+                </button>
+              </div>
+              <div class="research-count">
+                <span id="research-count-text">[Research Loading Text]</span>
+              </div>
             </div>
 
-          </div><!-- End Faq Column-->
+            <div class="research-container">
+              <!-- Research items loaded dynamically -->
+            </div>
+
+          </div><!-- End Research Column-->
 
         </div>
 
       </div>
 
-    </section><!-- /Faq Section -->
+    </section><!-- /Student History Research Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
+    <!-- Teacher Publications Section -->
+    <section id="publications" class="publications section light-background">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <span class="description-title">Contact</span>
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <span class="description-title">[Publications]</span>
+        <h2>[Publications Title]</h2>
+        <p>[Publications Description]</p>
       </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <!-- Category Tabs -->
+            <div class="publications-tabs">
+              <button class="pub-tab active" data-category="all">[All Publications]</button>
+              <button class="pub-tab" data-category="conference">[Conference Papers]</button>
+              <button class="pub-tab" data-category="preprints">[Preprints]</button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="publications-search-wrapper">
+              <div class="publications-search-box">
+                <i class="bi bi-search"></i>
+                <input
+                  type="text"
+                  id="publications-search"
+                  class="publications-search-input"
+                  placeholder="[Publications Search Placeholder]"
+                  autocomplete="off"
+                >
+                <button id="publications-clear" class="publications-clear-btn" style="display: none;">
+                  <i class="bi bi-x-circle"></i>
+                </button>
+              </div>
+              <div class="publications-count">
+                <span id="publications-count-text">[Publications Loading Text]</span>
+              </div>
+            </div>
+
+            <!-- Publications Container -->
+            <div class="publications-container">
+              <!-- Publication items loaded dynamically -->
+            </div>
+
+          </div><!-- End Publications Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Teacher Publications Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contact US</div>
-              <h2 class="display-5 mb-4">Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-              <p class="lead mb-4">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-content text-center" data-aos="fade-up" data-aos-delay="200">
+              <div class="section-category mb-3">[Contact Badge]</div>
+              <h2 class="display-5 mb-4">[Contact Title]</h2>
+              <p class="lead mb-5">[Contact Lead Text]</p>
 
-              <div class="contact-info mt-5">
-                <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-envelope-at me-3"></i>
-                  <span>info@example.com</span>
+              <div class="contact-info-wrapper">
+                <div class="contact-info-grid">
+                  <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-icon">
+                      <i class="bi bi-envelope-at"></i>
+                    </div>
+                    <h5 id="email-label">[Email Label]</h5>
+                    <a href="mailto:[Email]" class="info-link">[Email]</a>
+                  </div>
+
+                  <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="info-icon">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <h5 id="office-label">[Office Label]</h5>
+                    <p class="info-text">[Office]</p>
+                  </div>
                 </div>
 
-                <div class="info-item d-flex mb-3" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-telephone me-3"></i>
-                  <span>+1 5589 55488 558</span>
-                </div>
-
-                <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="500">
-                  <i class="bi bi-geo-alt me-3"></i>
-                  <span>A108 Adam Street, New York, NY 535022</span>
-                </div>
-
-                <a href="#" class="map-link d-inline-flex align-items-center" data-aos="fade-up" data-aos-delay="600">
-                  Open Map
+                <a href="#" id="map-link" class="btn-map mt-4" data-aos="fade-up" data-aos-delay="500" target="_blank">
+                  <i class="bi bi-map"></i>
+                  <span id="map-button-text">[Map Button Text]</span>
                   <i class="bi bi-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <div class="contact-form card" data-aos="fade-up" data-aos-delay="300">
-              <div class="card-body p-4 p-lg-5">
-
-                <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="600">
-                  <div class="row gy-4">
-
-                    <div class="col-12">
-                      <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                    </div>
-
-                    <div class="col-12 ">
-                      <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                    </div>
-
-                    <div class="col-12">
-                      <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                    </div>
-
-                    <div class="col-12">
-                      <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                    </div>
-
-                    <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                      <button type="submit" class="btn btn-submit w-100">Submit Message</button>
-                    </div>
-
-                  </div>
-                </form>
-
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -778,60 +330,26 @@
 
     <div class="container footer-top">
       <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
+        <div class="col-lg-6 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Landify</span>
+            <span class="sitename">[Footer Logo]</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <p>[Footer Description]</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <!-- Social links loaded dynamically -->
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        <div class="col-lg-6 col-md-12 footer-contact text-center text-md-start">
+          <h4 id="footer-contact-title">[Footer Contact Title]</h4>
+          <!-- Contact info loaded dynamically -->
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyWebsite</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -851,6 +369,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Data Loader -->
+  <script src="assets/js/data-loader.js"></script>
 
 </body>
 

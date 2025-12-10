@@ -1,0 +1,17 @@
+{
+  "sectionTitle": "聯絡我們",
+  "description": "如有研究詢問、合作機會或關於我們量子計算實驗室的一般問題，歡迎與我們聯繫。",
+  "badge": "聯絡我們",
+  "title": "取得聯繫",
+  "leadText": "我們歡迎有關研究機會、合作以及量子計算相關工作的詢問。",
+  "mapButtonText": "在 Google 地圖中開啟",
+  "labels": {
+    "email": "電子郵件",
+    "office": "辦公室"
+  },
+  "info": {
+    "email": "linhh@cs.nthu.edu.tw",
+    "office": "國立清華大學台達館610室",
+    "mapLink": "https://www.google.com/maps/place/%E5%9C%8B%E7%AB%8B%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8%E5%8F%B0%E9%81%94%E9%A4%A8/@24.795913,120.9895764,17z/data=!3m1!4b1!4m6!3m5!1s0x3468360b6d10014d:0x9436da76a96e5bae!8m2!3d24.795913!4d120.992146!16s%2Fg%2F1pp2tzbbx?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoASAFQAw%3D%3D"
+  }
+}

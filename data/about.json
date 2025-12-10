@@ -1,0 +1,6 @@
+{
+  "badge": "ABOUT OUR LAB",
+  "title": "What we are doing",
+  "leadText": "We study the latest quantum computing technologies — analyzing, improving, and applying them.",
+  "description": "Quantum computing uses the principles of quantum mechanics—like superposition and entanglement—to process information with qubits that can represent multiple states at once. This allows it to tackle certain problems, such as factoring or molecular simulation, much faster than classical computers. Although current quantum machines are still limited by noise and scalability, ongoing research aims to build error-corrected systems capable of achieving true quantum advantage."
+}

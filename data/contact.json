@@ -1,0 +1,17 @@
+{
+  "sectionTitle": "Contact",
+  "description": "Get in touch with us for research inquiries, collaborations, or general questions about our quantum computing lab.",
+  "badge": "CONTACT US",
+  "title": "Get in Touch",
+  "leadText": "We welcome inquiries about research opportunities, collaborations, and general questions about our work in quantum computing.",
+  "mapButtonText": "Open in Google Maps",
+  "labels": {
+    "email": "Email",
+    "office": "Office"
+  },
+  "info": {
+    "email": "linhh@cs.nthu.edu.tw",
+    "office": "Delta 610, NTHU, Taiwan",
+    "mapLink": "https://www.google.com/maps/place/%E5%9C%8B%E7%AB%8B%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8%E5%8F%B0%E9%81%94%E9%A4%A8/@24.795913,120.9895764,17z/data=!3m1!4b1!4m6!3m5!1s0x3468360b6d10014d:0x9436da76a96e5bae!8m2!3d24.795913!4d120.992146!16s%2Fg%2F1pp2tzbbx?entry=ttu&g_ep=EgoyMDI1MTIwOC4wIKXMDSoASAFQAw%3D%3D"
+  }
+}

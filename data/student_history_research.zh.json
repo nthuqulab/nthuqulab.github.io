@@ -1,0 +1,51 @@
+[
+  {
+    "title": "行程編碼字串間最長公共子字串的次線性時間量子演算法",
+    "author": "李子敬",
+    "advisor": "林瀚仚",
+    "year": 2023,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392030%22.&searchmode=basic"
+  },
+  {
+    "title": "一個使用量子近似最佳化演算法解決最小點覆蓋問題的研究",
+    "author": "張凱丞",
+    "advisor": "林瀚仚",
+    "year": 2024,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392180%22.&searchmode=basic"
+  },
+  {
+    "title": "在三個非重複字串上的最長共同子字串",
+    "author": "李東璋",
+    "advisor": "林瀚仚",
+    "year": 2023,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/900734eb3f3423cce944b8252d68e1b9/"
+  },
+  {
+    "title": "針對加權最大割問題的遞迴量子近似最佳化演算法變體",
+    "author": "施皓安",
+    "advisor": "林瀚仚",
+    "year": 2024,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/462e254298fab427686150faa43bff51/"
+  },
+  {
+    "title": "使用測量與前饋優化的稀疏量子態製備",
+    "author": "呂曜丞",
+    "advisor": "林瀚仚",
+    "year": 2025,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/89ebd0ac6df53f09c249a475f67acf12/"
+  },
+  {
+    "title": "量子事件識別與量子事件學習程序之模擬",
+    "author": "許峻源",
+    "advisor": "林瀚仚",
+    "year": 2025,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/89ebd0ac6df53f09c249a475f67acf12/"
+  },
+  {
+    "title": "深度有限的量子近似計數算法",
+    "author": "雷皓哲",
+    "advisor": "林瀚仚",
+    "year": 2024,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392177%22.&searchmode=basic"
+  }
+]

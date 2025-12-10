@@ -1,0 +1,20 @@
+{
+  "sectionTitle": "成員",
+  "description": "量子計算實驗室的團隊成員。",
+  "items": [
+    {
+      "name": "林瀚仚",
+      "position": "指導教授",
+      "image": "assets/img/person/advisor.jpg",
+      "bias": [0, -20],
+      "highlight": true
+    },
+    {
+      "name": "林奕辰",
+      "position": "碩士生",
+      "image": "assets/img/person/AlbertLin.jpg",
+      "bias": [0, -20],
+      "highlight": false
+    }
+  ]
+}

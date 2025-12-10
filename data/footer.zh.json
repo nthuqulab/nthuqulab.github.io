@@ -1,0 +1,29 @@
+{
+  "logo": "量子計算實驗室",
+  "description": "在國立清華大學透過量子演算法、錯誤修正和量子機器學習的尖端研究，推進量子計算的前沿。",
+  "socialLinks": [
+    { "platform": "facebook", "url": "#", "icon": "bi-facebook" }
+  ],
+  "usefulLinks": [
+    { "text": "首頁", "url": "#hero" },
+    { "text": "關於我們", "url": "#about" },
+    { "text": "研究領域", "url": "#fields" },
+    { "text": "團隊成員", "url": "#members" },
+    { "text": "論文發表", "url": "#publications" }
+  ],
+  "services": [
+    { "text": "量子演算法", "url": "#fields" },
+    { "text": "錯誤修正", "url": "#fields" },
+    { "text": "量子機器學習", "url": "#fields" },
+    { "text": "研究合作", "url": "#contact" },
+    { "text": "學生研究", "url": "#research" }
+  ],
+  "contact": {
+    "title": "聯絡我們",
+    "address": "台達館610",
+    "city": "國立清華大學",
+    "country": "台灣",
+    "phone": "",
+    "email": "linhh@cs.nthu.edu.tw"
+  }
+}

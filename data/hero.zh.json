@@ -1,0 +1,14 @@
+{
+  "title": "歡迎來到量子計算實驗室",
+  "titleHighlight": "量子計算實驗室",
+  "description": "量子計算實驗室成立於 2020 年，隸屬於國立清華大學資訊工程學系。研究領域涵蓋量子複雜度、偽隨機酉矩陣、量子最佳化以及後量子密碼學。",
+  "image": "assets/img/frontcover.png",
+  "buttons": [
+    { "text": "關於我們", "href": "#about", "type": "primary" }
+  ],
+  "floatingCards": [
+    { "icon": "bi-lightbulb", "text": "創新" },
+    { "icon": "bi-award", "text": "卓越" },
+    { "icon": "bi-people", "text": "合作" }
+  ]
+}

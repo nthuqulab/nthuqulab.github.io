@@ -1,0 +1,29 @@
+{
+  "logo": "Qulab",
+  "description": "Advancing the frontiers of quantum computing through cutting-edge research in quantum algorithms, error correction, and quantum machine learning at National Tsing Hua University.",
+  "socialLinks": [
+    { "platform": "facebook", "url": "#", "icon": "bi-facebook" }
+  ],
+  "usefulLinks": [
+    { "text": "Home", "url": "#hero" },
+    { "text": "About", "url": "#about" },
+    { "text": "Research Fields", "url": "#fields" },
+    { "text": "Team Members", "url": "#members" },
+    { "text": "Publications", "url": "#publications" }
+  ],
+  "services": [
+    { "text": "Quantum Algorithms", "url": "#fields" },
+    { "text": "Error Correction", "url": "#fields" },
+    { "text": "Quantum Machine Learning", "url": "#fields" },
+    { "text": "Research Collaborations", "url": "#contact" },
+    { "text": "Student Research", "url": "#research" }
+  ],
+  "contact": {
+    "title": "Contact Us",
+    "address": "Delta 610",
+    "city": "National Tsing Hua University",
+    "country": "Taiwan",
+    "phone": "",
+    "email": "linhh@cs.nthu.edu.tw"
+  }
+}

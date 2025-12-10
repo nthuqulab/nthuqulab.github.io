@@ -1,0 +1,20 @@
+{
+  "sectionTitle": "Members",
+  "description": "Current team members of our quantum computing lab.",
+  "items": [
+    {
+      "name": "Han-Hsuan Lin",
+      "position": "Advisor",
+      "image": "assets/img/person/advisor.jpg",
+      "bias": [0, -20],
+      "highlight": true
+    },
+    {
+      "name": "Albert Lin",
+      "position": "Master Student",
+      "image": "assets/img/person/AlbertLin.jpg",
+      "bias": [0, -20],
+      "highlight": false
+    }
+  ]
+}

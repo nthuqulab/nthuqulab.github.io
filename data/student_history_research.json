@@ -1,0 +1,51 @@
+[
+  {
+    "title": "A Sublinear Time Quantum Algorithm for Longest Common Substring Problem between Run-length Encoded Strings",
+    "author": "Lee, Tzu-Ching",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2023,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392030%22.&searchmode=basic"
+  },
+  {
+    "title": "A study of Quantum Approximate Optimization Algorithm for Minimum Vertex Cover problem",
+    "author": "Chang, Kai-Cheng",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2024,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392180%22.&searchmode=basic"
+  },
+  {
+    "title": "Longest common substring on non repetitive three strings",
+    "author": "Li, Tung-Chang",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2023,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/900734eb3f3423cce944b8252d68e1b9/"
+  },
+  {
+    "title": "Variants of Recursive Quantum Approximate Optimization Algorithm for weighted Maximum Cut problem",
+    "author": "Shih, Hao-An",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2024,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/462e254298fab427686150faa43bff51/"
+  },
+  {
+    "title": "Optimizing Sparse Quantum State Preparation with Measurement and Feedforward",
+    "author": "Lu, Yao-Chen",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2025,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/89ebd0ac6df53f09c249a475f67acf12/"
+  },
+  {
+    "title": "Quantum Event Identification and Simulation of Quantum Event-Learning Procedures",
+    "author": "Hsu, Chun-Yuan",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2025,
+    "download_link": "https://etd.lib.nthu.edu.tw/detail/89ebd0ac6df53f09c249a475f67acf12/"
+  },
+  {
+    "title": "Depth-Limited Quantum Approximate Counting Algorithm",
+    "author": "Lei, Hao-Zhe",
+    "advisor": "Lin, Han-Hsuan",
+    "year": 2024,
+    "download_link": "https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&s=id%3D%22112NTHU5392177%22.&searchmode=basic"
+  }
+]
