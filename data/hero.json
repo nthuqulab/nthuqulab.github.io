@@ -2,7 +2,7 @@
   "title": "Welcome to Quantum Lab",
   "titleHighlight": "Quantum Lab",
   "description": "Quantum Lab was established in 2020 at Department of Computer Science, National Tsing Hua University, Taiwan. Our research areas include quantum complexity, pseudorandom unitary, quantum optimization, and post quantum crytography.",
-  "image": "assets/img/frontcover.png",
+  "image": "assets/img/frontcover.jpg",
   "buttons": [
     { "text": "About Us", "href": "#about", "type": "primary" }
   ],

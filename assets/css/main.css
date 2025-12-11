@@ -1326,7 +1326,7 @@ section,
 
   .fields .nav-item.col-6 {
     flex: 0 0 100%;
-    max-width: 100%;
+    min-width: 100%;
   }
 }
 
