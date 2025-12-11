@@ -241,9 +241,13 @@ class DataLoader {
           ? `style="object-position: ${member.bias[0]}% ${member.bias[1]}%;"`
           : '';
 
+        // Add cursor pointer and click handler if link exists
+        const cursorStyle = member.link ? 'style="cursor: pointer;"' : '';
+        const onclickAttr = member.link ? `onclick="window.open('${member.link}', '_blank')"` : '';
+
         return `
           <div class="member-item ${member.highlight ? 'highlight' : ''}" data-aos="fade-up" data-aos-delay="${index * 100}">
-            <div class="member-content">
+            <div class="member-content" ${cursorStyle} ${onclickAttr}>
               <div class="client-info">
                 <div class="client-image">
                   <img src="${member.image}" alt="${member.name}" ${biasStyle}>

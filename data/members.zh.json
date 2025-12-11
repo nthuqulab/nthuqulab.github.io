@@ -15,6 +15,34 @@
       "image": "assets/img/person/AlbertLin.jpg",
       "bias": [0, -20],
       "highlight": false
+    },
+    {
+      "name": "周証恩",
+      "position": "碩士生",
+      "image": "assets/img/person/cec.jpg",
+      "bias": [0, 100],
+      "highlight": false
+    },
+    {
+      "name": "蕭登鴻",
+      "position": "專題生",
+      "image": "assets/img/person/dhh.jpg",
+      "bias": [0, -20],
+      "highlight": false
+    },
+    {
+      "name": "吳旻樺",
+      "position": "專題生",
+      "image": "assets/img/person/yhw.jpg",
+      "bias": [0, 0],
+      "highlight": false
+    },
+    {
+      "name": "林哲宇",
+      "position": "專題生",
+      "image": "assets/img/person/zyl.png",
+      "bias": [0, 0],
+      "highlight": false
     }
   ]
 }
