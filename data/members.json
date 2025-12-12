@@ -5,44 +5,62 @@
     {
       "name": "Han-Hsuan Lin",
       "position": "Advisor",
-      "image": "assets/img/person/advisor.jpg",
+      "image": "assets/img/person/advisor.avif",
       "link": "https://sites.google.com/view/han-hsuan-lins-homepage/home",
-      "bias": [0, 0],
+      "bias": [
+        0,
+        0
+      ],
       "highlight": true
     },
     {
       "name": "Albert Lin",
       "position": "Master Student",
-      "image": "assets/img/person/AlbertLin.jpg",
-      "bias": [0, 0],
+      "image": "assets/img/person/AlbertLin.avif",
+      "bias": [
+        0,
+        0
+      ],
       "highlight": false
     },
     {
       "name": "Cheng-En Chou",
       "position": "Master Student",
-      "image": "assets/img/person/cec.jpg",
-      "bias": [0, 100],
+      "image": "assets/img/person/cec.avif",
+      "bias": [
+        0,
+        100
+      ],
       "highlight": false
     },
     {
       "name": "Darren Hsiou",
       "position": "Undergraduate Student",
-      "image": "assets/img/person/dhh.jpg",
-      "bias": [0, -20],
+      "image": "assets/img/person/dhh.avif",
+      "bias": [
+        0,
+        -20
+      ],
       "highlight": false
     },
     {
       "name": "Min-Hua Wu",
       "position": "Undergraduate Student",
-      "image": "assets/img/person/yhw.jpg",
-      "bias": [0, 0],
+      "image": "assets/img/person/yhw.avif",
+      "bias": [
+        0,
+        0
+      ],
       "highlight": false
     },
     {
       "name": "Che-Yu Lin",
       "position": "Undergraduate Student",
-      "image": "assets/img/person/zyl.jpg",
-      "bias": [0, 0],
+      "image": "assets/img/person/zyl.avif",
+      "bias": [
+        0,
+        0
+      ],
       "highlight": false
     }
   ]
