@@ -51,13 +51,15 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
-        <span class="lang-text">中文</span>
-      </button>
+      <div class="header-controls d-flex align-items-center">
+        <button id="lang-toggle" class="lang-toggle" aria-label="Switch language">
+          <span class="lang-text">中文</span>
+        </button>
 
-      <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
-        <i class="bi bi-moon-fill"></i>
-      </button>
+        <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+      </div>
 
     </div>
   </header>
@@ -156,6 +158,12 @@
       </div><!-- End Section Title -->
 
       <div class="container">
+
+        <div class="member-tabs">
+          <button class="member-tab" data-tag="all">[All]</button>
+          <button class="member-tab active" data-tag="current">[Current]</button>
+          <button class="member-tab" data-tag="past">[Past]</button>
+        </div>
 
         <div class="member-masonry">
           <!-- Member items loaded dynamically -->

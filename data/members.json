@@ -1,6 +1,11 @@
 {
   "sectionTitle": "Members",
   "description": "Current team members of our quantum computing lab.",
+  "tabs": {
+    "all": "All",
+    "current": "Current",
+    "past": "Past"
+  },
   "items": [
     {
       "name": "Han-Hsuan Lin",
@@ -11,7 +16,19 @@
         0,
         0
       ],
-      "highlight": true
+      "highlight": true,
+      "tag": "current"
+    },
+    {
+      "name": "Kuan-Fu Tseng",
+      "position": "Master Student",
+      "image": "assets/img/person/kft.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
     },
     {
       "name": "Albert Lin",
@@ -21,7 +38,19 @@
         0,
         0
       ],
-      "highlight": false
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Wei-Hsin Li",
+      "position": "Master Student",
+      "image": "assets/img/person/whl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
     },
     {
       "name": "Cheng-En Chou",
@@ -31,7 +60,19 @@
         0,
         100
       ],
-      "highlight": false
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Wei-Chen Li",
+      "position": "Master Student",
+      "image": "assets/img/person/wcl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
     },
     {
       "name": "Darren Hsiou",
@@ -41,7 +82,8 @@
         0,
         -20
       ],
-      "highlight": false
+      "highlight": false,
+      "tag": "past"
     },
     {
       "name": "Min-Hua Wu",
@@ -51,7 +93,8 @@
         0,
         0
       ],
-      "highlight": false
+      "highlight": false,
+      "tag": "past"
     },
     {
       "name": "Che-Yu Lin",
@@ -61,7 +104,8 @@
         0,
         0
       ],
-      "highlight": false
+      "highlight": false,
+      "tag": "past"
     }
   ]
 }

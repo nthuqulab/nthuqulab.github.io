@@ -232,6 +232,16 @@ class DataLoader {
     const sectionDesc = document.querySelector('#members .section-title p');
     if (sectionDesc) sectionDesc.textContent = members.description;
 
+    // Update tab labels from data
+    if (members.tabs) {
+      const allTab = document.querySelector('.member-tab[data-tag="all"]');
+      if (allTab) allTab.textContent = members.tabs.all;
+      const currentTab = document.querySelector('.member-tab[data-tag="current"]');
+      if (currentTab) currentTab.textContent = members.tabs.current;
+      const pastTab = document.querySelector('.member-tab[data-tag="past"]');
+      if (pastTab) pastTab.textContent = members.tabs.past;
+    }
+
     // Render member items
     const memberMasonry = document.querySelector('.member-masonry');
     if (memberMasonry) {
@@ -245,8 +255,10 @@ class DataLoader {
         const cursorStyle = member.link ? 'style="cursor: pointer;"' : '';
         const onclickAttr = member.link ? `onclick="window.open('${member.link}', '_blank')"` : '';
 
+        const tag = member.tag || 'current';
+
         return `
-          <div class="member-item ${member.highlight ? 'highlight' : ''}" data-aos="fade-up" data-aos-delay="${index * 100}">
+          <div class="member-item ${member.highlight ? 'highlight' : ''}" data-tag="${tag}" data-aos="fade-up" data-aos-delay="${index * 100}">
             <div class="member-content" ${cursorStyle} ${onclickAttr}>
               <div class="client-info">
                 <div class="client-image">
@@ -262,6 +274,34 @@ class DataLoader {
         `;
       }).join('');
     }
+
+    this.initMemberTabs();
+  }
+
+  initMemberTabs() {
+    const tabs = document.querySelectorAll('.member-tab');
+
+    const applyFilter = (tag) => {
+      document.querySelectorAll('.member-item').forEach(item => {
+        if (tag === 'all' || item.dataset.tag === tag) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        applyFilter(tab.dataset.tag);
+      });
+    });
+
+    // Apply initial filter based on active tab
+    const activeTab = document.querySelector('.member-tab.active');
+    if (activeTab) applyFilter(activeTab.dataset.tag);
   }
 
   renderResearch() {

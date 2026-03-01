@@ -213,6 +213,11 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.header .header-controls {
+  margin-left: 15px;
+  gap: 8px;
+}
+
 .header .lang-toggle {
   background: none;
   border: 2px solid var(--heading-color);
@@ -226,7 +231,6 @@ h6 {
   justify-content: center;
   border-radius: 6px;
   transition: all 0.3s ease;
-  margin-left: 15px;
 }
 
 .header .lang-toggle:hover {
@@ -247,7 +251,6 @@ h6 {
   justify-content: center;
   border-radius: 50%;
   transition: all 0.3s ease;
-  margin-left: 15px;
 }
 
 .header .dark-mode-toggle:hover {
@@ -260,13 +263,8 @@ h6 {
     order: 1;
   }
 
-  .header .lang-toggle {
+  .header .header-controls {
     order: 2;
-    margin: 0 8px 0 0;
-  }
-
-  .header .dark-mode-toggle {
-    order: 3;
     margin: 0 10px 0 0;
   }
 
@@ -2298,6 +2296,41 @@ section,
 /*--------------------------------------------------------------
 # Members Section
 --------------------------------------------------------------*/
+.members .member-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.members .member-tab {
+  padding: 10px 24px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 75%);
+  background: var(--surface-color);
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--default-color);
+  transition: all 0.3s ease;
+}
+
+.members .member-tab:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.members .member-tab.active {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.members .member-item.hidden {
+  display: none;
+}
+
 .members .member-masonry {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

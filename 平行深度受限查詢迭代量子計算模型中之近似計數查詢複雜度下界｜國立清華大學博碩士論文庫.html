@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2 -->
+<html lang="zh-hant"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://etd.lib.nthu.edu.tw/static/img/ic_fav.png">
+    <link rel="icon" type="image/x-icon" href="https://etd.lib.nthu.edu.tw/static/img/ic_fav.png">
+    <link rel="bookmark" href="https://etd.lib.nthu.edu.tw/static/img/ic_fav.png">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫</title>
+    <meta name="robots" content="index, nofollow">
+    <meta name="description" content="平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界">
+    <meta name="keywords" contexnt="國立清華大學論文建檔、論文查詢">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫">
+    <meta property="og:url" content="https://etd.lib.nthu.edu.tw">
+    <meta property="og:image" content="https://etd.lib.nthu.edu.tw/static/img/ic_fav.png">
+    <meta property="og:description" content="平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界">
+    <!-- bs3 css -->
+    <link rel="stylesheet" href="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/style.css">
+    <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/jquery.min.js"></script>
+    
+
+<style type="text/css">
+  em.highlight {
+    color: red;
+    font-size: large;
+    font-style: inherit;
+  }
+
+  .overhide {
+    display: none;
+  }
+</style>
+
+    <link rel="stylesheet" href="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/jquery-ui.min.css">
+    <!--js順序有差要注意-->
+    <script src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/bootstrap.min.js"></script>
+    <script src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/jquery-ui.min.js"></script>
+    <!-- owl.carousel js-->
+    
+    <script>
+        function formatSecond(secs) {          
+            var day = Math.floor(secs / 86400);
+            var hr = Math.floor((secs - (day * 86400)) / 3600);
+            var min = Math.floor((secs - (day * 86400) - (hr * 3600)) / 60);
+            var sec = parseInt( secs - (day * 86400) - (hr * 3600) - (min * 60));
+
+            if (min < 10) { min = '0' + min; }
+            if (sec < 10) { sec = '0' + sec; }
+            time_name = ' ';
+            // if (day) time_name += day + ' 天 ';
+            if (hr) time_name += hr + ':';
+            if (min) time_name += min + ':';
+            time_name += sec;
+            return time_name;
+
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 【頁首】含主導覽列 -->
+    <nav class="navbar navbar-default indexNav" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">選單切換</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#indexSearch">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+		<a class="navbar-brand hidden-xs" href="https://etd.lib.nthu.edu.tw/" rel="noreferrer noopener"><img alt="logo" src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/logo_nthu.svg"></a><a class="navbar-brand hidden-xs" href="https://etd.lib.nthu.edu.tw/" rel="noreferrer noopener"></a>
+                <a class="navbar-brand visible-xs" href="https://etd.lib.nthu.edu.tw/"><img alt="mobile_logo" src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/logo_nthu_mobile.svg"></a><a class="navbar-brand visible-xs" href="https://etd.lib.nthu.edu.tw/" rel="noreferrer noopener"></a>
+            </div>
+            <!-- 手機隱藏選單區 -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <!-- 左選單 -->
+                <ul class="nav navbar-nav mainMenu a-inverse navbar-right">
+                    <li><a href="https://www.lib.nthu.edu.tw/use/thesis_submission.html" target="_blank">上傳須知</a></li>
+                    <li><a href="https://www.lib.nthu.edu.tw/use/thesis_check.html">論文上傳</a></li>
+                    
+                    <!-- no use -->
+		    
+                    <li><a href="https://www.lib.nthu.edu.tw/ETD/downloads/downloads.html" target="_blank">論文異動</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#">論文瀏覽
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://etd.lib.nthu.edu.tw/browse/">論文瀏覽</a></li>
+                            <li><a href="https://etd.lib.nthu.edu.tw/rankings/">熱門排行</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://etd.lib.nthu.edu.tw/advance/">進階查詢</a></li>
+		    
+                    
+                    
+                    
+                </ul>
+                <!-- 右選單 -->
+                <ul class="nav navbar-nav visible-xs">
+                     
+                    <li><a href="https://etd.lib.nthu.edu.tw/profile/">個人書房</a></li>
+		    
+		    <li><a href="https://etd.lib.nthu.edu.tw/advisor-review/list/received/">指導教授審核</a></li>
+                    <li><a href="https://etd.lib.nthu.edu.tw/zh-hant/help/map/">網站地圖</a></li>
+		    <li><a href="https://www.lib.nthu.edu.tw/" target="_blank" rel="noreferrer noopener">圖書館</a></li>
+                    
+                      <li><a href="Javascript: document.setlang.language.value=&#39;en&#39;; document.setlang.submit();" title="English">English</a></li>
+                    
+                </ul>
+            </div>
+            <!-- 手機隱藏選單區結束 -->
+            <!-- 最上，次選單 -->
+            <ul class="nav navbar-nav text-right subMenu clearfix hidden-xs">
+                 
+                <li><a href="https://etd.lib.nthu.edu.tw/profile/">個人書房</a></li>
+		
+		<li><a href="https://etd.lib.nthu.edu.tw/advisor-review/list/received/">指導教授審核</a></li>
+                <li><a href="https://etd.lib.nthu.edu.tw/zh-hant/help/map/">網站地圖</a></li>
+		<li><a href="https://www.lib.nthu.edu.tw/" target="_blank" rel="noreferrer noopener">圖書館</a></li>
+                
+                <li><a href="Javascript: document.setlang.language.value=&#39;en&#39;; document.setlang.submit();" title="English">English</a></li>
+                
+	    </ul>
+            
+            <form name="setlang" action="https://etd.lib.nthu.edu.tw/setlang/" method="post">
+                <input type="hidden" name="csrfmiddlewaretoken" value="hLVR9Csv9NCltPS9BtS82ezjBqZ9KT3OE7Qvg9Gy0KIzQRAyQgfqahkHKm3qEgYe">
+                <input name="next" type="hidden" value="/detail/c84254dd20dd123b05eca87e69eca922/?seq=2">
+                <input name="language" type="hidden" value="">
+            </form>
+        </div>
+    </nav>
+    <!-- /【頁首】含主導覽列 -->
+    
+
+
+
+
+    <!-- 【內容區塊】頁首(含導覽列)、頁尾以外的所有內容放置區域 -->
+    <div class="container container-wrapper">
+            <div class="row">
+                <!-- 【內容區塊】開始塞內容 -->
+                <!-- 這個頁面手機板時，內容會比側邊欄先出現，因此使用col-lg-push-3/9 -->
+                <!-- 右邊 -->
+                <div class="col-xs-12 col-lg-9 col-lg-push-3 mainContent">
+                    <!-- 標題區塊 -->
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-7">
+                            <!-- 左邊：主標題/麵包屑功能 -->
+                            <h4 class="title css-beforeTriangle mt-0">
+                            
+                                簡易檢索
+                             
+                            / 詳目顯示
+                            </h4>
+                        </div>
+                        <!-- /左邊：主標題/麵包屑功能 -->
+                        <!-- 右邊：小功能(分享、返回等) -->
+                        <div class="col-xs-12 col-lg-5 text-right">
+                            <a class="btn btn-sec btn-xs" role="button" title="回結果列表" aria-label="回結果列表" herf="" onclick="Javascript: window.location = &#39;/search/?csrfmiddlewaretoken=MVRTq7BP45DUtwM08J2avzppKjYFiJyl9hMxxEPSV2J8QyupnwpsDCaNTf2Wc6tL&amp;query_term=%E6%9E%97%E7%80%9A%E4%BB%9A&amp;query_field=text&amp;match_type=phrase&amp;query_op=&#39;;"><span class="glyphicon glyphicon-arrow-left"></span>回結果列表</a>
+                        </div>
+                        <!-- /右邊：小功能(分享、返回等) -->
+                    </div>
+                    <!-- /標題區塊 -->
+                    <!-- 主頁籤 -->
+                    
+                    
+                    <nav class="navbar tabBar">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#tabBar">
+                                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                </button>
+                                <a id="changeTextByClick" class="navbar-brand visible-xs" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#">論文基本資料</a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="tabBar">
+                                <ul class="nav navbar-nav">
+                                    <li role="presentation" class="active">
+                                        <a onclick="changeText(this)" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#parents_1" id="parents_1-tab" role="tab" data-toggle="tab" aria-controls="parents_1" aria-expanded="true">論文基本資料</a>
+                                    </li>
+                                    
+                                    
+                                    <li role="presentation" class="">
+                                        <a onclick="changeText(this)" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#parents_2" role="tab" id="parents_2-tab" data-toggle="tab" aria-controls="parents_2" aria-expanded="false">摘要</a>
+                                    </li>
+                                    
+                                    
+                                    
+
+                                    
+                                    <li role="presentation" class="">
+                                        <a onclick="changeText(this)" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#parents_5" role="tab" id="parents_5-tab" data-toggle="tab" aria-controls="parents_5" aria-expanded="false">電子全文</a>
+                                    </li>
+                                    
+                                    <li role="presentation" class="">
+                                        <a onclick="changeText(this)" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#parents_6" role="tab" id="parents_6-tab" data-toggle="tab" aria-controls="parents_6" aria-expanded="false">QR CODE</a>
+                                    </li>
+                                </ul>
+                                <script>
+                                function changeText(obj) {
+                                    var x = $(obj).text();
+                                    document.getElementById("changeTextByClick").innerHTML = x;
+                                    // console.log(x);
+                                    //根據點選的頁籤名稱，換標題文字
+                                }
+                                </script>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- /主頁籤 -->
+                    <!-- 主頁籤-對應內容處 -->
+                    <div id="tabContent" class="tab-content tab-contentWrapper">
+                        <!-- 頁籤對應內容：論文基本資料 -->
+                        <div role="tabpanel" class="tab-pane fade active in" id="parents_1" aria-labelledby="parents_1-tab">
+                            <!-- 標題以外內容放置處.content-wrapper -->
+                            <div class="col-xs-12 content-wrapper p-0">
+                                <!-- 搜尋結果-表格 -->
+                                <div class="col-xs-12 p-0">
+                                    <table class="table m-0">
+                                        <tbody><tr>
+                                            <th width="120">研究生：</th>
+                                            <td>
+                                                
+                                                    
+                                                        李威辰<br>
+                                                    
+                                                    
+                                                        
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>論文名稱：</th>
+                                            <td>
+                                                
+                                                    
+                                                        
+                                                            平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界<br>
+                                                        
+                                                    
+                                                    
+                                                        
+                                                            Lower Bounds on Query Complexity for
+Approximate Counting in a Parallel Depth-Limited Query Iterative Quantum Computation Model
+                                                        
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>指導教授：</th>
+                                            <td>
+                                                
+                                                    
+                                                        
+                                                            
+                                                                
+                                                                    <a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E6%9E%97%E7%80%9A%E4%BB%9A&amp;query_field=cadvisor&amp;query_op=&amp;match_type=phrase">
+                                                                    <em class="highlight">林</em><em class="highlight">瀚</em><em class="highlight">仚</em>
+                                                                    </a><br>
+                                                                
+                                                            
+                                                        
+
+                                                        
+                                                            
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=LIN%2C%20HAN-HSUAN&amp;query_field=eadvisor&amp;query_op=&amp;match_type=phrase">
+                                                                    LIN, HAN-HSUAN
+                                                                </a>
+                                                            
+                                                        
+
+                                                        
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <th>口試委員:</th>
+                                            <td>
+                                                
+                                                    
+                                                        
+                                                            
+                                                        
+
+                                                        
+                                                            
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=HON%20WING%20KAI&amp;query_field=ecommittee&amp;query_op=&amp;match_type=phrase">
+                                                                    HON WING KAI
+                                                                </a>
+                                                            
+                                                        
+
+                                                        
+                                                            <br>
+                                                        
+                                                    
+                                                        
+                                                            
+                                                        
+
+                                                        
+                                                            
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=Kuo%2C%20En-Jui&amp;query_field=ecommittee&amp;query_op=&amp;match_type=phrase">
+                                                                    Kuo, En-Jui
+                                                                </a>
+                                                            
+                                                        
+
+                                                        
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>學位類別：</th>
+                                            <td>
+                                                碩士 <br> Master
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>系所名稱：</th>
+                                            <td>
+                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E8%B3%87%E8%A8%8A%E5%B7%A5%E7%A8%8B%E5%AD%B8%E7%B3%BB&amp;query_field=dept&amp;query_op=&amp;match_type=phrase">
+                                                
+                                                    
+                                                        電機資訊學院 - 資訊工程學系<br>
+                                                        Computer Science
+                                                    
+                                                
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>論文出版年：</th>
+                                            <td>
+                                                2026
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>畢業學年度：</th>
+                                            <td>
+                                                114
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <th>語文別：</th>
+                                            <td>
+                                                中文
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <th>論文頁數：</th>
+                                            <td>
+                                                30
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <th>中文關鍵詞：</th>
+                                            <td>
+                                                
+                                                    
+                                                        <a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97&amp;query_field=ckeyword&amp;query_op=&amp;match_type=phrase">量子計算</a>
+                                                                、<a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E5%B9%B3%E8%A1%8C%E9%87%8F%E5%AD%90%E9%9B%BB%E8%B7%AF&amp;query_field=ckeyword&amp;query_op=&amp;match_type=phrase">平行量子電路</a>
+                                                                、<a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E6%B7%B1%E5%BA%A6%E5%8F%97%E9%99%90%E9%87%8F%E5%AD%90%E9%9B%BB%E8%B7%AF&amp;query_field=ckeyword&amp;query_op=&amp;match_type=phrase">深度受限量子電路</a>
+                                                                、<a href="https://etd.lib.nthu.edu.tw/search/?query_term=%E8%BF%91%E4%BC%BC%E8%A8%88%E6%95%B8%E6%BC%94%E7%AE%97%E6%B3%95&amp;query_field=ckeyword&amp;query_op=&amp;match_type=phrase">近似計數演算法</a>
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                        
+                                        <tr>
+                                            <th>外文關鍵詞：</th>
+                                            <td>
+                                                
+                                                    
+                                                        <a href="https://etd.lib.nthu.edu.tw/search/?query_term=NISQ&amp;query_field=ekeyword&amp;query_op=&amp;match_type=phrase">NISQ</a>, 
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=d-CQ&amp;query_field=ekeyword&amp;query_op=&amp;match_type=phrase">d-CQ</a>, 
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=approximate%20counting&amp;query_field=ekeyword&amp;query_op=&amp;match_type=phrase">approximate counting</a>, 
+                                                                <a href="https://etd.lib.nthu.edu.tw/search/?query_term=quantum%20computing&amp;query_field=ekeyword&amp;query_op=&amp;match_type=phrase">quantum computing</a>
+                                                    
+                                                
+                                            </td>
+                                        </tr>
+                                        
+
+                                        
+                                        
+                                        <tr>
+                                            <th>相關次數：</th>
+                                            <td class="sub">
+                                                <i class="glyphicon glyphicon-eye-open"></i><span>點閱：63</span> 
+                                                <i class="glyphicon glyphicon-floppy-save"></i><span>下載：0</span> 
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>分享至:</th>
+                                            <td class="sub">
+                                            <div id="copyLinkTabs">
+                                                 <div class="icon">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/%3Fseq%3D2" target="_blank"><div class="facebook-icon"><span class="sr-only">分享至facebook</span></div></a>
+</div>
+
+                                                <div class="icon">
+    <a href="https://twitter.com/intent/tweet?text=/detail/c84254dd20dd123b05eca87e69eca922/%3Fseq%3D2%20https%3A//etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/" class="meta-act-link meta-tweet" target="_blank"><div class="twitter-icon"><span class="sr-only">分享至twitter</span></div></a>
+</div>
+                                            </div>
+                                        </td>
+                                        </tr>
+                                    </tbody></table>
+                                    <!-- 複製引用網址 -->
+
+                                    <script type="text/javascript">
+                                    function copyTextFunction() {
+                                        var copyText = document.getElementById("textForCopy");
+                                        copyText.select();
+                                        copyText.setSelectionRange(0, 99999)
+                                        document.execCommand("copy");
+                                        alert("網址已複製");
+                                    }
+                                    </script>
+                                    <div class="input-group">
+                                        
+                                            <input title="本文網址" id="textForCopy" type="text" class="form-control" value="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/">
+                                        
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-gray" type="button" onclick="copyTextFunction()">複製引用網址</button>
+                                      </span>
+                                    </div>
+                                    
+                                    <table class="table m-0">
+                                        <tbody><tr>
+                                            <td>
+						<a class="btn btn-default" href="https://nthu.primo.exlibrisgroup.com/discovery/search?query=title,contains,%E5%B9%B3%E8%A1%8C%E6%B7%B1%E5%BA%A6%E5%8F%97%E9%99%90%E6%9F%A5%E8%A9%A2%E8%BF%AD%E4%BB%A3%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97%E6%A8%A1%E5%9E%8B%E4%B8%AD%E4%B9%8B%E8%BF%91%E4%BC%BC%E8%A8%88%E6%95%B8%E6%9F%A5%E8%A9%A2%E8%A4%87%E9%9B%9C%E5%BA%A6%E4%B8%8B%E7%95%8C&amp;tab=Everything&amp;search_scope=MyInst_and_CI&amp;vid=886UST_NTHU:886UST_NTHU&amp;offset=0&amp;lang=zh-tw" target="_blank" rel="noreferrer noopener">查詢本校圖書館目錄</a>
+                                                <a class="btn btn-default" href="https://ndltd.ncl.edu.tw/cgi-bin/gs32/gsweb.cgi/login?o=dnclcdr&amp;s=au=%22%E6%9D%8E%E5%A8%81%E8%BE%B0%22%20and%20ti=%22%E5%B9%B3%E8%A1%8C%E6%B7%B1%E5%BA%A6%E5%8F%97%E9%99%90%E6%9F%A5%E8%A9%A2%E8%BF%AD%E4%BB%A3%E9%87%8F%E5%AD%90%E8%A8%88%E7%AE%97%E6%A8%A1%E5%9E%8B%E4%B8%AD%E4%B9%8B%E8%BF%91%E4%BC%BC%E8%A8%88%E6%95%B8%E6%9F%A5%E8%A9%A2%E8%A4%87%E9%9B%9C%E5%BA%A6%E4%B8%8B%E7%95%8C%22.&amp;searchmode=basic&amp;searchsymbol=hyLibCore.webpac.search.common_symbol" target="_blank" rel="noreferrer noopener">查詢臺灣博碩士論文知識加值系統</a>                                                
+                                                <a data-toggle="modal" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#feedback" onclick="javascript:tabAction(&#39;#feedback&#39;,&#39;/ajax/thesis-feedback/?ajax_id=c84254dd20dd123b05eca87e69eca922&#39;)" class="btn btn-default">勘誤回報</a>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                    <div class="footSort list-inline">
+                                        <li class="hidden-xs w-full">
+                                            <div class="col-xs-3 text-left p-0">
+                                                
+                                                <a class="btn btn-default btn-xs" role="button" title="上一筆" aria-label="上一筆" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=1&amp;goto=1"><span class="glyphicon glyphicon-arrow-left"></span>上一筆</a>
+                                                
+                                            </div>
+                                            <div class="col-xs-6 text-center">
+                                            </div>
+                                            <div class="col-xs-3 text-right p-0">
+                                                
+                                                <a class="btn btn-default btn-xs" role="button" title="下一筆" aria-label="下一筆" herf="" onclick="Javascript: window.location = &#39;/detail/c84254dd20dd123b05eca87e69eca922/?seq=3&amp;goto=1&#39;"><span class="glyphicon glyphicon-arrow-right"></span>下一筆</a>
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="visible-xs w-full">
+                                            <div class="col-xs-3 text-left p-0">
+                                                
+                                                <a class="btn btn-default btn-xs" role="button" title="上一筆" aria-label="上一筆" href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=1&amp;goto=1"><span class="glyphicon glyphicon-arrow-left"></span> 上一筆</a>
+                                                
+                                            </div>
+                                            <div class="col-xs-6 text-center">
+                                            </div>
+                                            <div class="col-xs-3 text-right p-0">
+                                                
+                                                <a class="btn btn-default btn-xs" role="button" title="下一筆" aria-label="下一筆" herf="" onclick="Javascript: window.location = &#39;/detail/c84254dd20dd123b05eca87e69eca922/?seq=3&amp;goto=1&#39;"><span class="glyphicon glyphicon-arrow-right"></span>下一筆 </a>
+                                                
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <!-- /搜尋結果-表格 -->
+                            </div>
+                            <!-- /標題以外內容放置處.content-wrapper -->
+                        </div>
+                        <!-- /頁籤對應內容：論文基本資料 -->
+                        <!-- 頁籤對應內容：摘要 -->
+                        <div role="tabpanel" class="tab-pane fade" id="parents_2" aria-labelledby="parents_2-tab">
+                            <p>
+                                
+                                
+                                    
+                                        
+                                            </p><p>我們構建一個量子預言機模型，稱為平行T-depth查詢迭代量子計算模<br>型，其中T表示在每一次量子計算迭代中允許使用的預言機查詢次數上限。<br>在此模型下，我們證明：對於任意量子近似計數演算法，當輸入為包含N<br>個元素的清單、其中有M個被標記元素，且乘性誤差為ϵ=| ˜M−M|/M 時，其查詢複雜度至少為Ω (N/ϵMT)。</p>
+                                        
+                                    
+                                
+                                
+                            <p></p>
+                            <hr>
+                            <p>
+                                
+                                
+                                    
+                                        
+                                            </p><p>We construct a quantum oracle model called the parallel T-depth query iterative<br>quantum computational model, where T is the number of oracle queries allowed<br>in each iteration of the quantum computation. In this model, we prove that any<br>quantum approximate counting algorithm, given input size N (the total number<br>of items in the list), M (the number of marked items), and multiplicative error<br>ϵ = | ˜M−M|/M , musthavequery complexity at least Ω(N/ϵMT).<br>.</p>
+                                        
+                                    
+                                
+                                
+                            <p></p>
+                        </div>
+                        <!-- /頁籤對應內容：摘要 -->
+                        <!-- 頁籤對應內容：目次 -->
+                        <div role="tabpanel" class="tab-pane fade" id="parents_3" aria-labelledby="parents_3-tab">
+                          
+                        </div>
+                        <!-- /頁籤對應內容：目次 -->
+                        <!-- 頁籤對應內容：參考文獻 -->
+                        <div role="tabpanel" class="tab-pane fade" id="parents_4" aria-labelledby="parents_4-tab">
+                          
+                        </div>
+                        <!-- /頁籤對應內容：參考文獻 -->
+                        <!-- 頁籤對應內容：電子全文 -->
+                        <div role="tabpanel" class="tab-pane fade" id="parents_5" aria-labelledby="parents_5-tab">
+                            
+                            
+                                
+                                    <nav>
+                                        <ul class="pager pager-flex">
+                                        
+                                            <li class="col-xs-12 col-md-4">
+                                                
+                                                <a href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#" title="下載檔案" onclick="window.open(&#39;/popupfileful/c84254dd20dd123b05eca87e69eca922/218882/&#39;,&#39;_blank&#39;,&#39;status=1,height=400,width=600,toolbar=0,resizeable=0&#39;)" rel="noreferrer noopener">
+                                                    <div class="ic-img">
+                                                        <img src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/ic-downloaded.png" alt="下載圖示">
+                                                    </div>
+						    &nbsp;
+						    
+						    電子全文
+						    
+                                                </a>
+                                                
+                                            </li>
+                                        
+                                        </ul>
+                                    </nav>
+                                
+                            
+                            
+                            
+                        </div>
+                        
+                        <!-- /頁籤對應內容：電子全文 -->
+                        <!-- 頁籤對應內容：QR CODE -->
+                        <div role="tabpanel" class="tab-pane fade" id="parents_6" aria-labelledby="parents_6-tab">
+                            <center>
+                                <img src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/saved_resource" alt="QR CODE">
+
+                            </center>
+                        </div>
+                        <!-- /頁籤對應內容：QR CODE -->
+                    </div>
+		    
+                    <!-- /主頁籤-對應內容處 -->
+                </div>
+                <!-- /右邊 -->
+                <!-- 左邊 -->
+                <div class="col-xs-12 col-lg-3 col-lg-pull-9 sideContent-right">
+                    <!-- 側邊欄- -->
+                    <!-- 側邊欄-第一種類：手風琴開闔效果區塊 -->
+                    <div class="col-xs-12 p-0">
+                        <div class="panel-group panel-default" role="tablist">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="collapseListGroupHeading_1_1">
+                                    <h4 class="panel-title">
+                                        <a href="https://etd.lib.nthu.edu.tw/detail/c84254dd20dd123b05eca87e69eca922/?seq=2#collapseListGroup_1_1" class="" role="button" data-toggle="collapse" aria-expanded="true" aria-controls="collapseListGroup_1_1"><i class="more-less glyphicon glyphicon-minus"></i>相關論文</a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" role="tabpanel" id="collapseListGroup_1_1" aria-labelledby="collapseListGroupHeading_1_1" aria-expanded="true">
+                                    <ol class="list-group">
+                                        
+                                        <li class="list-group-item">
+                                            
+                                            <a href="https://etd.lib.nthu.edu.tw/detail/86fc437b76e60b932522532dc0c5067d/">基於可滿足性模理論的量子電路佈局合成方法</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="list-group-item">
+                                            
+                                            <a href="https://etd.lib.nthu.edu.tw/detail/bb5cefc69c71c846cbd48b920f6d6850/">應用於量子電腦讀取電路之IPD被動元件設計</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="list-group-item">
+                                            
+                                            <a href="https://etd.lib.nthu.edu.tw/detail/89a066e7d211749d78780d75e1161cbc/">應用於量子電腦極低溫極低功耗之CMOS鎖相迴路設計</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="list-group-item">
+                                            
+                                            <a href="https://etd.lib.nthu.edu.tw/detail/6d598d7404f26ad0db6663726e7101fd/">磁性與有機導電奈米線提升熱電優值之電聲子傳播研究</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="list-group-item">
+                                            
+                                            <a href="https://etd.lib.nthu.edu.tw/detail/ca344bcee3734d49b26c67c265ac1b57/">應用於量子計算之低功耗被動I/Q混頻器及量子位元保真度估算程序</a>
+                                            
+                                        </li>
+                                        
+                                    </ol>
+                                </div>
+                                
+                                <script type="text/javascript">
+                                    function POSTForm(formid, result, url) {
+                                        var form = $(formid)[0];
+                                        var formData = new FormData(form);
+                                        event.preventDefault();
+                                        $.ajax({
+                                                url: url,
+                                                type:"POST",
+                                                //data: $(formid).serialize(),
+                                                data: formData,
+                                                processData: false,
+                                                contentType: false,
+                                                success:function(datalist){
+                                                    $('#'+result).html(datalist);
+                                                }
+                                            });        
+                                        return false;
+                                    }
+                                    function toggleIcon(e) {
+                                        $(e.target)
+                                            .prev('.panel-heading')
+                                            .find(".more-less")
+                                            .toggleClass('glyphicon-plus glyphicon-minus');
+                                    }
+                                    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+                                    $('.panel-group').on('shown.bs.collapse', toggleIcon);
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /側邊欄-第一種類：手風琴開闔效果區塊 -->
+                    <!-- /側邊欄- -->
+                </div>
+                <!-- /左邊 -->
+                <!-- /【內容區塊】內容結束處 -->
+            </div>
+        </div>
+        <!-- /【內容區塊】頁首(含導覽列)、頁尾以外的所有內容放置區域 -->
+        <div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="ModalLabel_feedback"></div>
+
+
+
+    <!-- 【頁尾】 -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    
+                    <p>國立清華大學圖書館著作權聲明 Copyright © 2010 All rights reserved<br>本館地址：30013 新竹市光復路二段101號.<br>信箱：ref@my.nthu.edu.tw 電話：03-5742995<br></p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <a href="https://etd.lib.nthu.edu.tw/review/list/received/" style="color: white;">檢核管理端</a>　<a href="https://etd.lib.nthu.edu.tw/leaveschool/" style="color: white;">系所與櫃檯查看</a><br>
+                    
+                    <p>本網站最佳瀏覽解析度為 1024 x 768，建議瀏覽器 FireFox、Google Chrome、 IE7.0以上版本</p>
+                    <p><a href="https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/Information_Security_Policy.html" target="_blank" style="color: white;">資通安全政策</a>&nbsp;<a href="https://www.ccxp.nthu.edu.tw/ccxp/INQUIRE/Personal_Information_Protection_Policy.pdf" target="_blank" style="color: white;">個資保護政策</a>  </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /【頁尾】 -->
+    
+    <!-- owl.carousel js-->
+    <script src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/highlight.js"></script>
+    <script src="./平行深度受限查詢迭代量子計算模型中之近似計數查詢複雜度下界｜國立清華大學博碩士論文庫_files/app.js"></script>
+    <script type="text/javascript">
+        function tabAction(result, url) {
+            url = encodeURI(url);
+            url = url.replace(/%20&%20/g, "%20%26%20");
+            url = url + "&cache=" + (new Date()).getTime();
+            $.get(url, {}, function(data) {
+                $(result).html(data);
+            });
+        }
+        
+    </script>
+
+
+
+</body></html>
