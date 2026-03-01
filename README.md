@@ -75,18 +75,18 @@ nthuqulab.github.io/
 
 Edit the relevant JSON file in `data/`. Always update both `<file>.json` (English) and `<file>.zh.json` (Chinese) to keep both languages in sync.
 
-| What to change | File to edit |
-|---|---|
-| Site title / logo | `data/site.json` |
-| Navigation links | `data/navigation.json` |
-| Hero section | `data/hero.json` |
-| About section | `data/about.json` |
-| Research fields | `data/fields.json` |
-| Team members | `data/members.json` |
-| Contact info | `data/contact.json` |
-| Footer | `data/footer.json` |
-| Advisor publications | `data/teacher_publish.json` |
-| Student research | `data/student_history_research.json` |
+| What to change | File to edit | resource |
+|---|---|---|
+| Site title / logo | `data/site.json` |    |
+| Navigation links | `data/navigation.json` |   |
+| Hero section | `data/hero.json` | |
+| About section | `data/about.json` |   |
+| Research fields | `data/fields.json` |    |
+| Team members | `data/members.json` |  |
+| Contact info | `data/contact.json` |  |
+| Footer | `data/footer.json` | |
+| Advisor publications | `data/teacher_publish.json` |  |
+| Student research | `data/student_history_research.json` | [query webpage](https://etd.lib.nthu.edu.tw/search/?csrfmiddlewaretoken=MVRTq7BP45DUtwM08J2avzppKjYFiJyl9hMxxEPSV2J8QyupnwpsDCaNTf2Wc6tL&query_term=%E6%9E%97%E7%80%9A%E4%BB%9A&query_field=text&match_type=phrase&query_op=) |
 
 ### 2. Update images
 
