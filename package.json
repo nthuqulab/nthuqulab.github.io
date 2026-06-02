@@ -1,0 +1,13 @@
+{
+  "name": "nthuqulab-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NTHU Quantum Lab website — static site with a Markdown-to-JSON content build step.",
+  "scripts": {
+    "build": "node scripts/build-data.mjs"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

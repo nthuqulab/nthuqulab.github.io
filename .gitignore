@@ -1,2 +1,11 @@
 *.local
 .claude
+
+# Node
+node_modules/
+
+# Generated data — built from content/*.md by scripts/build-data.mjs.
+# Run `npm run build` before previewing locally; CI builds these on deploy.
+data/members.json
+data/teacher_publish.json
+data/student_history_research.json

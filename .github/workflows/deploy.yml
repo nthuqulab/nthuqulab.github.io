@@ -1,0 +1,75 @@
+name: Build and Deploy to GitHub Pages
+
+# Compiles content/*.md into data/*.json, then publishes to a `gh-pages`
+# branch:
+#   - push to main        -> deploys the production site to the branch root
+#   - pull request to main -> deploys a live preview under pr-preview/pr-<N>/
+#                             and comments the preview URL on the PR
+#                             (removed automatically when the PR is closed)
+#
+# One-time setup: in the repository, go to
+#   Settings -> Pages -> Build and deployment -> Source
+# and select "Deploy from a branch", then choose branch `gh-pages` / (root).
+# The custom domain (CNAME) is preserved automatically.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, reopened, synchronize, closed]
+
+permissions:
+  contents: write        # push to the gh-pages branch
+  pull-requests: write   # comment the preview URL on the PR
+
+# Serialize deploys per ref so concurrent runs don't clobber gh-pages.
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        if: github.event.action != 'closed'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        if: github.event.action != 'closed'
+        run: npm install
+
+      - name: Build data (content/*.md -> data/*.json)
+        if: github.event.action != 'closed'
+        run: npm run build
+
+      - name: Assemble publish directory
+        if: github.event.action != 'closed'
+        run: |
+          mkdir -p _site
+          cp -r index.html assets data _site/
+          if [ -f CNAME ]; then cp CNAME _site/; fi
+          touch _site/.nojekyll
+
+      # Production: push to main -> gh-pages root (keep existing PR previews).
+      - name: Deploy production site
+        if: github.event_name == 'push'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: _site
+          clean-exclude: pr-preview/
+
+      # Pull request: create / update / tear down the preview at
+      # https://<your-pages-domain>/pr-preview/pr-<N>/
+      - name: Deploy PR preview
+        if: github.event_name == 'pull_request'
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: _site
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview

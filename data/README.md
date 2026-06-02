@@ -1,109 +1,46 @@
-# Data Structure
+# Data Directory
 
-This directory contains the content data for the website, split into modular JSON files for better organization and maintainability.
+Content the website loads at runtime. Each file is **bilingual**: translatable
+strings are `{ "en": ..., "zh": ... }` objects; non-translatable values
+(image paths, hrefs, icons, emails) are plain values. `assets/js/data-loader.js`
+collapses each `{ en, zh }` leaf to the active language in the browser.
 
-## Files Overview
+## Files
 
-| File | Size | Description |
-|------|------|-------------|
-| `site.json` | 168B | Site metadata (title, logo, favicon) |
-| `navigation.json` | 307B | Navigation menu items |
-| `hero.json` | 633B | Hero section content |
-| `about.json` | 676B | About section content |
-| `fields.json` | 2.7KB | Research fields tabs and content |
-| `members.json` | 2.0KB | Student/member information |
-| `faq.json` | 2.1KB | FAQ items |
-| `contact.json` | 1.1KB | Contact information and form config |
-| `footer.json` | 1.3KB | Footer content and links |
+| File | Description | Source |
+|------|-------------|--------|
+| `site.json` | Site title, logo, favicon | edit here |
+| `navigation.json` | Navigation menu items | edit here |
+| `hero.json` | Hero section content and CTAs | edit here |
+| `about.json` | About section | edit here |
+| `fields.json` | Research field tabs | edit here |
+| `contact.json` | Contact info and labels | edit here |
+| `footer.json` | Footer links and contact | edit here |
+| `research_meta.json` | Student research section labels | edit here |
+| `publications_meta.json` | Publications section labels | edit here |
+| `members.json` | Lab members | **generated** from `content/members.md` |
+| `teacher_publish.json` | Faculty publications | **generated** from `content/publications.md` |
+| `student_history_research.json` | Student theses | **generated** from `content/research.md` |
 
-**Total Size:** ~11KB
+> **Generated** files are build artifacts (git-ignored). Do not edit them
+> directly — edit the matching `content/*.md` and run `npm run build`.
 
-## File Details
+## Bilingual format
 
-### site.json
-Contains basic site metadata:
-- Page title
-- Logo text
-- Favicon paths
+```json
+{
+  "title": { "en": "What we are doing", "zh": "我們在做什麼" },
+  "image": "assets/img/frontcover.jpg"
+}
+```
 
-### navigation.json
-Array of navigation menu items with:
-- Label (text)
-- href (link)
-- active (boolean)
+When editing, update **both** `en` and `zh` in each `{ en, zh }` object.
 
-### hero.json
-Hero section data:
-- Title and highlighted text
-- Description
-- Image path
-- Call-to-action buttons
-- Floating cards (icons and text)
+## Editing
 
-### about.json
-About section content:
-- Section badge text
-- Title
-- Lead text
-- Description paragraph
+1. Section text/labels → edit the JSON file here (keep `en`/`zh` in sync).
+2. Members / publications / theses → edit `content/*.md`, then `npm run build`.
+3. Validate JSON syntax, then preview locally (`python3 -m http.server`).
 
-### fields.json
-Research fields with tabs:
-- Section title and description
-- Array of field tabs with:
-  - Icon
-  - Title and subtitle
-  - Full description
-  - Image
-  - Floating card data
-
-### members.json
-Student/member information:
-- Section title and description
-- Array of student/member items with:
-  - Name
-  - Position
-  - Image path
-  - Quote
-  - Highlight flag
-
-### faq.json
-Array of FAQ items:
-- Question
-- Answer
-- Active state (for default open)
-
-### contact.json
-Contact section data:
-- Section metadata
-- Contact information (email, phone, address)
-- Form configuration
-- Messages (loading, success, error)
-
-### footer.json
-Footer content:
-- Logo and description
-- Social media links
-- Useful links
-- Services links
-- Contact information
-- Copyright text
-
-## How It Works
-
-The `data-loader.js` script loads all these files in parallel using `Promise.all()` and dynamically populates the HTML content. This approach provides:
-
-- **Modularity**: Each section can be edited independently
-- **Performance**: Files load in parallel
-- **Maintainability**: Clear separation of concerns
-- **Scalability**: Easy to add new sections
-
-## Editing Content
-
-To update website content:
-
-1. Edit the appropriate JSON file
-2. Ensure JSON syntax is valid
-3. Refresh the website - changes will appear automatically
-
-No HTML modification needed for content updates!
+See the top-level [`README.md`](../README.md) and [`STRUCTURE.md`](STRUCTURE.md)
+for the full architecture and build/deploy workflow.
