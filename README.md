@@ -14,10 +14,11 @@ Official website for the **National Tsing Hua University Quantum Computing Lab**
 | Styling | Bootstrap 5.3.7 + Custom CSS/SCSS |
 | Icons | Bootstrap Icons |
 | Scripting | Vanilla JavaScript |
-| Content | Modular JSON files (bilingual EN/ZH) |
-| Deployment | GitHub Pages |
+| Content | Bilingual JSON (`{ en, zh }`) + Markdown sources |
+| Build | Node.js script (`content/*.md` → `data/*.json`) |
+| Deployment | GitHub Pages via GitHub Actions |
 
-No build system or package manager is required — the site is served directly as static files.
+The site itself runs as static files in the browser. A small Node build step compiles the Markdown content sources into the JSON the site loads.
 
 ---
 
@@ -26,199 +27,161 @@ No build system or package manager is required — the site is served directly a
 ```
 nthuqulab.github.io/
 ├── index.html                        # Main HTML shell (slot-based, no hardcoded content)
+├── package.json                      # Build script + gray-matter dependency
+├── content/                          # Markdown sources for list-style content
+│   ├── members.md                    # Lab members  → data/members.json
+│   ├── publications.md               # Faculty papers → data/teacher_publish.json
+│   └── research.md                   # Student theses → data/student_history_research.json
+├── scripts/
+│   └── build-data.mjs                # Compiles content/*.md into data/*.json
+├── .github/workflows/
+│   └── deploy.yml                    # Build + deploy to GitHub Pages
 ├── assets/
-│   ├── css/
-│   │   ├── main.css                  # Primary stylesheet
-│   │   ├── contact.css               # Contact section styles
-│   │   ├── publications.css          # Publications section styles
-│   │   └── research.css              # Research section styles
+│   ├── css/                          # main.css, contact.css, publications.css, research.css
 │   ├── js/
-│   │   ├── data-loader.js            # Loads JSON data and renders into HTML slots
+│   │   ├── data-loader.js            # Loads JSON, picks language, renders into HTML
 │   │   └── main.js                   # UI interactions (scroll, mobile nav, dark mode)
-│   ├── img/
-│   │   ├── frontcover.jpg            # Hero background image
-│   │   └── person/                   # Team member photos (AVIF format)
+│   ├── img/person/                   # Team member photos (AVIF)
 │   ├── scss/                         # SCSS source files
 │   └── vendor/                       # Bootstrap CSS + JS
-└── data/                             # Content data files — edit these to update the site
+└── data/                             # Content the browser loads (bilingual JSON)
     ├── site.json                     # Page title, logo, favicon
     ├── navigation.json               # Navigation menu items
     ├── hero.json                     # Hero section content and CTAs
     ├── about.json                    # About / mission section
     ├── fields.json                   # Research fields and descriptions
-    ├── members.json                  # Team member list with images
     ├── contact.json                  # Contact information
-    ├── footer.json                   # Footer links and copyright
-    ├── teacher_publish.json          # Advisor publications
-    ├── student_history_research.json # Student research history
-    ├── student_info.json             # Student details
-    ├── research_meta.json            # Research section metadata
-    ├── publications_meta.json        # Publications section metadata
-    ├── *.zh.json                     # Chinese translations of the above
+    ├── footer.json                   # Footer links
+    ├── research_meta.json            # Research section labels
+    ├── publications_meta.json        # Publications section labels
+    ├── members.json                  # GENERATED from content/members.md
+    ├── teacher_publish.json          # GENERATED from content/publications.md
+    ├── student_history_research.json # GENERATED from content/research.md
     ├── README.md                     # Data directory documentation
-    └── STRUCTURE.md                  # Detailed data architecture notes
+    └── STRUCTURE.md                  # Data architecture notes
 ```
 
-### How Content Is Rendered
-
-`data-loader.js` fetches all JSON files in **parallel** (`Promise.all`) and populates HTML slots in `index.html`. Each slot is a placeholder like `[Hero Title]` or `[About Title]` that gets replaced at runtime.
-
-- **Content edits** → edit `data/` JSON files, no HTML changes needed
-- **UI/layout changes** → edit `assets/css/` or `index.html`
-- **Bilingual support** → `*.zh.json` variants are loaded when the user switches language
+> The three **GENERATED** files are build artifacts (git-ignored). Edit the matching `content/*.md` source and run `npm run build` instead of editing them directly.
 
 ---
 
-## How to Update the Site
+## Bilingual content (`{ en, zh }`)
 
-### 1. Update content (text, links, team info, publications)
+Every section has **one** JSON file holding both languages. Translatable strings are objects with `en` and `zh` keys; non-translatable values (image paths, hrefs, icons) stay as plain values:
 
-Edit the relevant JSON file in `data/`. Always update both `<file>.json` (English) and `<file>.zh.json` (Chinese) to keep both languages in sync.
+```json
+{
+  "titleHighlight": { "en": "Quantum Lab", "zh": "量子計算實驗室" },
+  "description":    { "en": "Quantum Lab was...", "zh": "量子計算實驗室成立於..." },
+  "image": "assets/img/frontcover.jpg"
+}
+```
 
-| What to change | File to edit | resource |
-|---|---|---|
-| Site title / logo | `data/site.json` |    |
-| Navigation links | `data/navigation.json` |   |
-| Hero section | `data/hero.json` | |
-| About section | `data/about.json` |   |
-| Research fields | `data/fields.json` |    |
-| Team members | `data/members.json` |  |
-| Contact info | `data/contact.json` |  |
-| Footer | `data/footer.json` | |
-| Advisor publications | `data/teacher_publish.json` |  |
-| Student research | `data/student_history_research.json` | [query webpage](https://etd.lib.nthu.edu.tw/search/?csrfmiddlewaretoken=MVRTq7BP45DUtwM08J2avzppKjYFiJyl9hMxxEPSV2J8QyupnwpsDCaNTf2Wc6tL&query_term=%E6%9E%97%E7%80%9A%E4%BB%9A&query_field=text&match_type=phrase&query_op=) |
+At runtime `data-loader.js` collapses each `{ en, zh }` leaf to the active language (`localizeData`). Switching language re-projects the already-loaded data — no extra network requests. Language preference is stored in `localStorage`.
 
-### 2. Update images
-
-Place images in `assets/img/person/` for team photos. Use **AVIF format** for best performance, then update the `image` path in `data/members.json`.
-
-### 3. Update styles
-
-Edit files in `assets/css/`. Each section has its own stylesheet. If editing SCSS, compile from `assets/scss/` — the compiled output goes to `assets/css/`.
+There are **no** `*.zh.json` files anymore — both languages live side by side.
 
 ---
 
-## Modifying index.html
+## How content is rendered
 
-`index.html` is the **structural shell** of the site. Content inside it is not hardcoded — it is populated by `data-loader.js` at runtime. You only need to edit `index.html` for **layout or structural changes**, not for content updates.
+`data-loader.js` fetches all JSON files in parallel (`Promise.all`), localizes them to the chosen language, then renders into `index.html`. The page starts with the `is-loading` class on `<body>`, which hides text content; the class is removed once rendering finishes, so the content **fades in** and empty placeholders never flash on screen.
 
-### Sections and their HTML IDs
-
-| Section | `id` attribute | Data source |
-|---|---|---|
-| Navigation | `#navmenu` | `navigation.json` |
-| Hero | `#hero` | `hero.json` |
-| About | `#about` | `about.json` |
-| Research Fields | `#fields` | `fields.json` |
-| Team Members | `#members` | `members.json` |
-| Student Research | `#research` | `student_history_research.json` + `research_meta.json` |
-| Publications | `#publications` | `teacher_publish.json` + `publications_meta.json` |
-| Contact | `#contact` | `contact.json` |
-| Footer | `#footer` | `footer.json` |
-
-### Slot placeholders
-
-Slots are text nodes like `[Hero Title]` or `[About Title]` inside HTML elements. `data-loader.js` targets these elements by selector and replaces their `textContent` or `innerHTML`. **Do not remove or rename these placeholder elements** unless you update the corresponding selector in `data-loader.js`.
-
-Example slots visible in `index.html`:
-
-```html
-<!-- Filled by data-loader.js from hero.json -->
-<h1 class="hero-title">[Hero Title]</h1>
-<p class="hero-description">[Hero Description]</p>
-
-<!-- Filled from about.json -->
-<span class="section-badge">[Section Badge]</span>
-<h2>[About Title]</h2>
-<p class="lead-text">[Lead Text]</p>
-
-<!-- Filled from contact.json -->
-<h2 class="display-5 mb-4">[Contact Title]</h2>
-<a href="mailto:[Email]" class="info-link">[Email]</a>
-```
-
-### When to edit index.html
-
-| Task | Edit index.html? |
-|---|---|
-| Change section text / labels | No — edit the JSON file |
-| Change layout or add a new section | Yes |
-| Add / remove a CSS stylesheet | Yes — add `<link>` in `<head>` |
-| Add / remove a JS file | Yes — add `<script>` before `</body>` |
-| Change animation timing (`data-aos-delay`) | Yes |
-| Add a new static UI element (e.g. a button) | Yes |
-
-### Adding a new section
-
-1. Add a `<section id="new-section">` block in `index.html` at the desired position.
-2. Create `data/new-section.json` (and `data/new-section.zh.json` for Chinese).
-3. Add a CSS file in `assets/css/` if needed, and link it in `<head>`.
-4. Add the fetch and render logic to `assets/js/data-loader.js`.
-
-### CSS and JS loading order
-
-Stylesheets are loaded in `<head>` in this order:
-
-```html
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets/css/main.css" rel="stylesheet">
-<link href="assets/css/research.css" rel="stylesheet">
-<link href="assets/css/publications.css" rel="stylesheet">
-<link href="assets/css/contact.css" rel="stylesheet">
-```
-
-Scripts are loaded at the end of `<body>` in this order:
-
-```html
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- other vendor scripts (AOS, Swiper, etc.) -->
-<script src="assets/js/main.js"></script>      <!-- UI interactions -->
-<script src="assets/js/data-loader.js"></script> <!-- must load after main.js -->
-```
-
-`data-loader.js` must be last because it depends on the DOM and on `main.js` being initialized.
+- **Section text/labels** → edit the bilingual JSON in `data/`
+- **Members / publications / theses** → edit `content/*.md`, then `npm run build`
+- **UI/layout** → edit `assets/css/` or `index.html`
 
 ---
 
-## Deployment Workflow
+## How to update the site
 
-The site is hosted on **GitHub Pages** from the `main` branch. Any commit merged into `main` is automatically deployed.
+### Members, faculty publications, student theses (Markdown)
 
-### Branch protection
+Edit the relevant file in `content/` — each uses YAML frontmatter:
 
-- **Direct pushes to `main` are not allowed.**
-- All changes must go through a **pull request (PR)** and be reviewed before merging.
+- **`content/members.md`** — `sectionTitle`, `description`, `tabs` (bilingual) plus an `items` list. Each member has bilingual `name`/`position`, an `image` (the member photo → the site's `image` field), `bias` (`[x, y]` object-position %), `highlight`, `tag` (`current`/`past`), and an optional `link`. The `image` accepts a local path/URL **or** a pasted GitHub image tag — wrap it in single quotes and the build extracts the URL: `image: '<img ... src="https://github.com/user-attachments/assets/..." />'`.
+- **`content/publications.md`** — an `items` list; set `category` to `conference` or `preprint`. Titles/authors are language-neutral plain strings. Quote `arXiv_id` to keep it a string.
+- **`content/research.md`** — an `items` list of theses (`title`, `author`, `advisor`, `year`, `download_link`).
 
-### Recommended workflow
+Then regenerate the JSON:
 
 ```bash
-# 1. Create a new branch for your change
+npm install   # first time only
+npm run build
+```
+
+### Section text, links, contact info (JSON)
+
+Edit the relevant bilingual JSON file in `data/`, updating **both** the `en` and `zh` values in each `{ en, zh }` object.
+
+### Images
+
+Member photos are set in `content/members.md`'s `image` field, which accepts either:
+
+- a local file in `assets/img/person/` (AVIF recommended), e.g. `image: assets/img/person/name.avif`; or
+- a pasted GitHub image tag — drag/paste an image into the Markdown editor on GitHub and paste the resulting `<img ... src="https://github.com/user-attachments/assets/..." />` tag (wrapped in single quotes) into the `image` field. The build extracts the URL automatically.
+
+### Styles
+
+Edit files in `assets/css/`. If editing SCSS, compile from `assets/scss/`.
+
+---
+
+## Build step
+
+`scripts/build-data.mjs` compiles the Markdown sources into the JSON the site loads:
+
+| Source | → | Output |
+|---|---|---|
+| `content/members.md` | → | `data/members.json` |
+| `content/publications.md` | → | `data/teacher_publish.json` (split into `conference_papers` / `preprints`) |
+| `content/research.md` | → | `data/student_history_research.json` |
+
+```bash
+npm run build
+```
+
+The generated files are git-ignored; GitHub Actions builds them on every deploy.
+
+---
+
+## Deployment
+
+The workflow (`.github/workflows/deploy.yml`) builds the site (`content/*.md` → `data/*.json`) and publishes it to a **`gh-pages`** branch:
+
+- **Push to `main`** → deploys the production site to the branch root → live at the site URL.
+- **Pull request to `main`** → deploys a **live preview** under `pr-preview/pr-<N>/` and comments the preview link on the PR. The preview is removed automatically when the PR is closed.
+
+So every PR gets a clickable preview URL, e.g. `https://qulab.cs.nthu.edu.tw/pr-preview/pr-42/`, before it is merged.
+
+### One-time setup
+
+In the repository: **Settings → Pages → Build and deployment → Source → "Deploy from a branch"**, then choose branch **`gh-pages`** / **(root)**. The custom domain (`CNAME`) is preserved automatically. (The first run of the workflow creates the `gh-pages` branch.)
+
+### Branch protection / workflow
+
+Direct pushes to `main` are not allowed — open a pull request.
+
+```bash
 git checkout -b your-branch-name
-
-# 2. Make your edits (e.g., update a JSON file or index.html)
-
-# 3. Stage and commit
-git add data/members.json
-git commit -m "update: add new member John Doe"
-
-# 4. Push your branch
+# edit content/*.md, data/*.json, or assets/
+npm run build            # regenerate data if you changed content/*.md
+git add -A
+git commit -m "update: ..."
 git push origin your-branch-name
-
-# 5. Open a pull request on GitHub targeting main
-# -> After review, merge -> GitHub Pages auto-deploys
+# open a PR targeting main → CI builds a preview + comments the link
+#   → review on the preview URL → merge → production auto-deploys
 ```
-
-After the PR is merged, GitHub Pages typically deploys within **1–2 minutes**.
 
 ---
 
-## Local Preview
+## Local preview
 
-Since this is a static site, serve it locally for reliable preview (opening via `file://` may block JSON fetches due to CORS):
+Serve the site locally (opening via `file://` blocks JSON fetches due to CORS):
 
 ```bash
-# Using Python (no install needed)
+npm install        # first time only
+npm run build      # generate data/members.json etc. from content/*.md
 python3 -m http.server 8000
-# Then open http://localhost:8000
+# open http://localhost:8000
 ```

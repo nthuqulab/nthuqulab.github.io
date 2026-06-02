@@ -1,28 +1,34 @@
 {
-  "logo": "Qulab",
-  "description": "Advancing the frontiers of quantum computing through cutting-edge research in quantum algorithms, error correction, and quantum machine learning at National Tsing Hua University.",
+  "logo": {
+    "en": "Qulab",
+    "zh": "量子計算實驗室"
+  },
+  "description": {
+    "en": "Advancing the frontiers of quantum computing through cutting-edge research in quantum algorithms, error correction, and quantum machine learning at National Tsing Hua University.",
+    "zh": "在國立清華大學透過量子演算法、錯誤修正和量子機器學習的尖端研究，推進量子計算的前沿。"
+  },
   "socialLinks": [
     { "platform": "facebook", "url": "#", "icon": "bi-facebook" }
   ],
   "usefulLinks": [
-    { "text": "Home", "url": "#hero" },
-    { "text": "About", "url": "#about" },
-    { "text": "Research Fields", "url": "#fields" },
-    { "text": "Team Members", "url": "#members" },
-    { "text": "Publications", "url": "#publications" }
+    { "text": { "en": "Home", "zh": "首頁" }, "url": "#hero" },
+    { "text": { "en": "About", "zh": "關於我們" }, "url": "#about" },
+    { "text": { "en": "Research Fields", "zh": "研究領域" }, "url": "#fields" },
+    { "text": { "en": "Team Members", "zh": "團隊成員" }, "url": "#members" },
+    { "text": { "en": "Publications", "zh": "論文發表" }, "url": "#publications" }
   ],
   "services": [
-    { "text": "Quantum Algorithms", "url": "#fields" },
-    { "text": "Error Correction", "url": "#fields" },
-    { "text": "Quantum Machine Learning", "url": "#fields" },
-    { "text": "Research Collaborations", "url": "#contact" },
-    { "text": "Student Research", "url": "#research" }
+    { "text": { "en": "Quantum Algorithms", "zh": "量子演算法" }, "url": "#fields" },
+    { "text": { "en": "Error Correction", "zh": "錯誤修正" }, "url": "#fields" },
+    { "text": { "en": "Quantum Machine Learning", "zh": "量子機器學習" }, "url": "#fields" },
+    { "text": { "en": "Research Collaborations", "zh": "研究合作" }, "url": "#contact" },
+    { "text": { "en": "Student Research", "zh": "學生研究" }, "url": "#research" }
   ],
   "contact": {
-    "title": "Contact Us",
-    "address": "Delta 610",
-    "city": "National Tsing Hua University",
-    "country": "Taiwan",
+    "title": { "en": "Contact Us", "zh": "聯絡我們" },
+    "address": { "en": "Delta 610", "zh": "台達館610" },
+    "city": { "en": "National Tsing Hua University", "zh": "國立清華大學" },
+    "country": { "en": "Taiwan", "zh": "台灣" },
     "phone": "",
     "email": "linhh@cs.nthu.edu.tw"
   }

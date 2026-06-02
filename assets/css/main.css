@@ -4071,3 +4071,21 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/*--------------------------------------------------------------
+# Content Loading State
+# Hide text content until the JSON data has been loaded and rendered,
+# so empty placeholders never flash on screen. The data loader removes
+# the `is-loading` class from <body> once rendering completes.
+--------------------------------------------------------------*/
+.main,
+#header .logo,
+.footer .footer-top {
+  transition: opacity 0.4s ease;
+}
+
+body.is-loading .main,
+body.is-loading #header .logo,
+body.is-loading .footer .footer-top {
+  opacity: 0;
+}

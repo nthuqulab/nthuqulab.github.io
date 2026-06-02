@@ -1,158 +1,73 @@
-# Website Data Structure
+# Website Data Architecture
 
-## Directory Layout
+## Overview
 
-```
-/Users/doggylin/Documents/LabWebsite/
-├── index.html                      # Main HTML (slot-based, no hardcoded content)
-├── extracted_data.json            # Original monolithic file (11KB) [deprecated]
-├── data/                          # New modular data structure
-│   ├── site.json                  # 168B - Site metadata
-│   ├── navigation.json            # 307B - Nav menu
-│   ├── hero.json                  # 633B - Hero section
-│   ├── about.json                 # 676B - About section
-│   ├── fields.json                # 2.7KB - Research fields
-│   ├── members.json               # 2.0KB - Student/member info
-│   ├── faq.json                   # 2.1KB - FAQ items
-│   ├── contact.json               # 1.1KB - Contact info
-│   ├── footer.json                # 1.3KB - Footer content
-│   └── README.md                  # Documentation
-└── assets/
-    └── js/
-        └── data-loader.js         # Dynamic content loader
-```
+Content lives in two forms:
 
-## Data Flow
+1. **Bilingual JSON** in `data/` — hand-edited section content. Translatable
+   strings are `{ "en", "zh" }` objects; other values are plain.
+2. **Markdown sources** in `content/` — list-style content (members,
+   publications, theses) compiled into JSON by `scripts/build-data.mjs`.
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                      index.html                              │
-│                  (Slot-based placeholders)                   │
-│  [Logo] [Hero Title] [About Section] [Dynamic Content]...   │
-└─────────────────────┬───────────────────────────────────────┘
-                      │
-                      ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   data-loader.js                             │
-│              Parallel data loading engine                     │
-└──────┬──────┬──────┬──────┬──────┬──────┬──────┬──────┬────┘
-       │      │      │      │      │      │      │      │
-       ▼      ▼      ▼      ▼      ▼      ▼      ▼      ▼
-   ┌─────┐ ┌────┐ ┌────┐ ┌─────┐ ┌────┐ ┌────┐ ┌────┐ ┌────┐
-   │site │ │nav │ │hero│ │about│ │flds│ │mems│ │faq │ │foot│
-   └─────┘ └────┘ └────┘ └─────┘ └────┘ └────┘ └────┘ └────┘
-      ▲      ▲      ▲       ▲       ▲      ▲      ▲      ▲
-      └──────┴──────┴───────┴───────┴──────┴──────┴──────┘
-                    All files loaded in parallel
-                    using Promise.all()
+content/*.md  ──(npm run build)──►  data/{members,teacher_publish,student_history_research}.json
+                                          │
+data/*.json (hand-edited + generated) ────┤
+                                          ▼
+                                  assets/js/data-loader.js
+                            fetch (Promise.all) → localize({en,zh}) → render
+                                          ▼
+                                      index.html
 ```
 
-## Comparison: Monolithic vs Modular
+## Runtime data flow
 
-### Before (Monolithic)
-```json
-{
-  "site": { ... },
-  "navigation": [ ... ],
-  "hero": { ... },
-  "about": { ... },
-  "fields": { ... },
-  "members": { ... },
-  "faq": [ ... ],
-  "contact": { ... },
-  "footer": { ... }
-}
-```
-- **Size:** 11KB single file
-- **Loading:** One HTTP request
-- **Editing:** Must edit large file, risk of syntax errors
-- **Version control:** Large diffs for small changes
-- **Caching:** Entire file re-downloaded on any change
+`data-loader.js`:
 
-### After (Modular)
-```
-data/
-├── site.json          (168B)
-├── navigation.json    (307B)
-├── hero.json          (633B)
-├── about.json         (676B)
-├── fields.json        (2.7KB)
-├── members.json       (2.0KB)
-├── faq.json           (2.1KB)
-├── contact.json       (1.1KB)
-└── footer.json        (1.3KB)
-```
-- **Size:** ~11KB total (9 files)
-- **Loading:** 9 parallel HTTP requests (faster with HTTP/2)
-- **Editing:** Edit only relevant section
-- **Version control:** Clean, focused diffs
-- **Caching:** Only changed files re-downloaded
-- **Organization:** Clear separation of concerns
+1. `loadData()` fetches every file in `data/` in parallel and caches the raw
+   bilingual objects in `this.rawData`.
+2. `applyLanguage()` runs `localizeData(rawData, lang)`, recursively collapsing
+   each `{ en, zh }` leaf to the active language string, leaving arrays and
+   plain values untouched.
+3. The `renderXxx()` methods consume the localized data and populate
+   `index.html`. Because localization already produced plain strings, render
+   logic is language-agnostic.
+4. The language toggle changes `lang`, re-runs `applyLanguage()` and re-renders
+   from the cached raw data — **no refetch**.
 
-## Benefits
+## Loading state
 
-### 1. **Modularity**
-Each section is independent. Update navigation without touching hero data.
+`<body>` starts with `is-loading`, which hides text content via CSS. The loader
+removes the class after rendering (or on failure), so content fades in and no
+empty placeholders flash.
 
-### 2. **Maintainability**
-Smaller files are easier to read, edit, and validate.
+## Files
 
-### 3. **Collaboration**
-Team members can work on different sections without merge conflicts.
+### Hand-edited bilingual JSON
+`site`, `navigation`, `hero`, `about`, `fields`, `contact`, `footer`,
+`research_meta`, `publications_meta`.
 
-### 4. **Performance** (with HTTP/2)
-Parallel loading can be faster than one large file.
-Better caching granularity.
+### Generated (do not edit; build artifacts, git-ignored)
+| Output | Source | Notes |
+|---|---|---|
+| `members.json` | `content/members.md` | Section meta + `items`; member `image` is a path, URL, or pasted GitHub `<img>` tag (src extracted at build) |
+| `teacher_publish.json` | `content/publications.md` | `items` split by `category` into `conference_papers` / `preprints` |
+| `student_history_research.json` | `content/research.md` | `items` emitted as a flat array |
 
-### 5. **Clarity**
-Clear file names indicate content purpose.
-Easier to locate specific data.
+## Build
 
-### 6. **Error Isolation**
-Syntax error in one file doesn't break entire site.
-
-## Usage Example
-
-### Editing Navigation
 ```bash
-# Before: Edit 11KB file, find navigation section
-vim extracted_data.json
-
-# After: Edit 307B file directly
-vim data/navigation.json
+npm install      # first time
+npm run build    # content/*.md → data/*.json
 ```
 
-### Adding a Student/Member
-```bash
-# Just edit members.json
-vim data/members.json
+`scripts/build-data.mjs` parses YAML frontmatter with `gray-matter`. GitHub
+Actions runs the build on every push/PR to `main` and deploys to GitHub Pages.
 
-# Add new student/member to the "items" array
-# No need to touch other sections
-```
+## Adding a new section
 
-### Updating Contact Info
-```bash
-# Edit only contact data
-vim data/contact.json
-
-# Change email, phone, or address
-# All other sections unchanged
-```
-
-## Migration Path
-
-The old `extracted_data.json` file is kept for reference but is no longer used. The `data-loader.js` now loads from the modular structure in the `data/` directory.
-
-To rollback (if needed):
-1. Update `data-loader.js` to fetch from `extracted_data.json`
-2. Restore the old `loadData()` method
-
-## Future Enhancements
-
-Possible improvements:
-- Add validation schema for each JSON file
-- Implement versioning for data files
-- Add TypeScript types for data structures
-- Create admin UI for editing JSON files
-- Add build step to combine files for production
+1. Add a `<section>` block in `index.html`.
+2. Create `data/new-section.json` with bilingual `{ en, zh }` values
+   (or a `content/new-section.md` + build rule for list-style data).
+3. Add a stylesheet in `assets/css/` and link it in `<head>` if needed.
+4. Add fetch + render logic in `assets/js/data-loader.js`.
