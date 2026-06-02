@@ -1,0 +1,22 @@
+{
+  "sectionTitle": {
+    "en": "Student Research",
+    "zh": "學生研究"
+  },
+  "title": {
+    "en": "Student History Research",
+    "zh": "學生研究成果"
+  },
+  "description": {
+    "en": "Explore the research work and academic contributions of our students, including theses, papers, and ongoing projects in quantum computing and related fields.",
+    "zh": "探索我們學生的研究工作和學術貢獻，包括論文、研究計畫以及量子計算相關領域的持續研究。"
+  },
+  "searchPlaceholder": {
+    "en": "Search by title, author, or advisor...",
+    "zh": "以標題、作者或指導教授搜尋..."
+  },
+  "loadingText": {
+    "en": "Loading research papers...",
+    "zh": "載入研究論文中..."
+  }
+}

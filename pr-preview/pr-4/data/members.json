@@ -1,0 +1,180 @@
+{
+  "sectionTitle": {
+    "en": "Members",
+    "zh": "成員"
+  },
+  "description": {
+    "en": "Current team members of our quantum computing lab.",
+    "zh": "量子計算實驗室的團隊成員。"
+  },
+  "tabs": {
+    "all": {
+      "en": "All",
+      "zh": "全部"
+    },
+    "current": {
+      "en": "Current",
+      "zh": "現任"
+    },
+    "past": {
+      "en": "Past",
+      "zh": "歷屆"
+    }
+  },
+  "items": [
+    {
+      "name": {
+        "en": "Han-Hsuan Lin",
+        "zh": "林瀚仚"
+      },
+      "position": {
+        "en": "Advisor",
+        "zh": "指導教授"
+      },
+      "image": "assets/img/person/advisor.avif",
+      "link": "https://sites.google.com/view/han-hsuan-lins-homepage/home",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": true,
+      "tag": "current"
+    },
+    {
+      "name": {
+        "en": "Kuan-Fu Tseng",
+        "zh": "曾冠富"
+      },
+      "position": {
+        "en": "Master Student",
+        "zh": "碩士生"
+      },
+      "image": "assets/img/person/kft.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": {
+        "en": "Albert Lin",
+        "zh": "林奕辰"
+      },
+      "position": {
+        "en": "Master Student",
+        "zh": "碩士生"
+      },
+      "image": "https://github.com/user-attachments/assets/86a50e6c-ed1f-463b-a4ad-6d7ab1d93203",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": {
+        "en": "Wei-Hsin Li",
+        "zh": "李為新"
+      },
+      "position": {
+        "en": "Master Student",
+        "zh": "碩士生"
+      },
+      "image": "assets/img/person/whl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": {
+        "en": "Cheng-En Chou",
+        "zh": "周証恩"
+      },
+      "position": {
+        "en": "Master Student",
+        "zh": "碩士生"
+      },
+      "image": "assets/img/person/cec.avif",
+      "bias": [
+        0,
+        100
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": {
+        "en": "Wei-Chen Li",
+        "zh": "李威辰"
+      },
+      "position": {
+        "en": "Master Student",
+        "zh": "碩士生"
+      },
+      "image": "assets/img/person/wcl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": {
+        "en": "Darren Hsiou",
+        "zh": "蕭登鴻"
+      },
+      "position": {
+        "en": "Undergraduate Student",
+        "zh": "專題生"
+      },
+      "image": "assets/img/person/dhh.avif",
+      "bias": [
+        0,
+        -20
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": {
+        "en": "Min-Hua Wu",
+        "zh": "吳旻樺"
+      },
+      "position": {
+        "en": "Undergraduate Student",
+        "zh": "專題生"
+      },
+      "image": "assets/img/person/yhw.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": {
+        "en": "Che-Yu Lin",
+        "zh": "林哲宇"
+      },
+      "position": {
+        "en": "Undergraduate Student",
+        "zh": "專題生"
+      },
+      "image": "assets/img/person/zyl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    }
+  ]
+}
