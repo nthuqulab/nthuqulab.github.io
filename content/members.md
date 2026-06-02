@@ -38,8 +38,7 @@ tabs:
 - **Bias 照片位置:** 0, 0
 
 ## Albert Lin | 林奕辰
-<img width="915" height="1139" alt="image" src="https://github.com/user-attachments/assets/86a50e6c-ed1f-463b-a4ad-6d7ab1d93203" />
-
+![photo](../assets/img/person/AlbertLin.avif)
 
 - **Position 職稱:** Master Student | 碩士生
 - **Tag 分類:** current
