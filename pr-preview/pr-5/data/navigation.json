@@ -1,0 +1,9 @@
+[
+  { "label": { "en": "Home", "zh": "首頁" }, "href": "#hero", "active": true },
+  { "label": { "en": "About", "zh": "關於我們" }, "href": "#about", "active": false },
+  { "label": { "en": "Fields", "zh": "研究領域" }, "href": "#fields", "active": false },
+  { "label": { "en": "Members", "zh": "成員" }, "href": "#members", "active": false },
+  { "label": { "en": "Research", "zh": "研究成果" }, "href": "#research", "active": false },
+  { "label": { "en": "Publications", "zh": "論文發表" }, "href": "#publications", "active": false },
+  { "label": { "en": "Contact", "zh": "聯絡我們" }, "href": "#contact", "active": false }
+]
