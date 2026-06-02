@@ -1,29 +1,48 @@
+// Recursively collapse bilingual { en, zh } leaf objects to the active
+// language string, leaving every other value untouched. Falls back to the
+// other language (then null) when a translation is missing.
+function localizeData(node, lang) {
+  if (Array.isArray(node)) {
+    return node.map(item => localizeData(item, lang));
+  }
+  if (node && typeof node === 'object') {
+    const keys = Object.keys(node);
+    const isTranslatable = keys.length > 0 && keys.every(k => k === 'en' || k === 'zh');
+    if (isTranslatable) {
+      return node[lang] ?? node.en ?? node.zh ?? null;
+    }
+    const out = {};
+    for (const key of keys) out[key] = localizeData(node[key], lang);
+    return out;
+  }
+  return node;
+}
+
 // Data Loader - Dynamically loads content from multiple JSON files
 class DataLoader {
   constructor(language = 'en') {
     this.data = {};
+    this.rawData = null;
     this.language = language;
   }
 
   async loadData() {
     try {
-      // Get language suffix
-      const langSuffix = this.language === 'zh' ? '.zh' : '';
-
-      // Define all data files to load
+      // Each file now holds both languages as { en, zh } leaves, so there is
+      // a single file per section regardless of the active language.
       const dataFiles = {
-        site: `./data/site${langSuffix}.json`,
-        navigation: `./data/navigation${langSuffix}.json`,
-        hero: `./data/hero${langSuffix}.json`,
-        about: `./data/about${langSuffix}.json`,
-        fields: `./data/fields${langSuffix}.json`,
-        members: `./data/members${langSuffix}.json`,
-        research: `./data/student_history_research${langSuffix}.json`,
-        researchMeta: `./data/research_meta${langSuffix}.json`,
-        publications: `./data/teacher_publish${langSuffix}.json`,
-        publicationsMeta: `./data/publications_meta${langSuffix}.json`,
-        contact: `./data/contact${langSuffix}.json`,
-        footer: `./data/footer${langSuffix}.json`
+        site: './data/site.json',
+        navigation: './data/navigation.json',
+        hero: './data/hero.json',
+        about: './data/about.json',
+        fields: './data/fields.json',
+        members: './data/members.json',
+        research: './data/student_history_research.json',
+        researchMeta: './data/research_meta.json',
+        publications: './data/teacher_publish.json',
+        publicationsMeta: './data/publications_meta.json',
+        contact: './data/contact.json',
+        footer: './data/footer.json'
       };
 
       // Load all files in parallel
@@ -35,16 +54,24 @@ class DataLoader {
 
       const results = await Promise.all(promises);
 
-      // Store results in this.data
+      // Cache the raw bilingual data so language switches need no refetch.
+      this.rawData = {};
       results.forEach(({ key, data }) => {
-        this.data[key] = data;
+        this.rawData[key] = data;
       });
 
+      this.applyLanguage();
       return this.data;
     } catch (error) {
       console.error('Error loading data:', error);
       return null;
     }
+  }
+
+  // Project the cached bilingual data onto the active language.
+  applyLanguage() {
+    if (!this.rawData) return;
+    this.data = localizeData(this.rawData, this.language);
   }
 
   renderSite() {
@@ -763,22 +790,31 @@ class DataLoader {
     }
   }
 
+  renderAll() {
+    this.renderSite();
+    this.renderNavigation();
+    this.renderHero();
+    this.renderAbout();
+    this.renderFields();
+    this.renderMembers();
+    this.renderResearch();
+    this.renderPublications();
+    this.renderContact();
+    this.renderFooter();
+  }
+
   async init() {
-    await this.loadData();
+    try {
+      await this.loadData();
 
-    if (this.data) {
-      this.renderSite();
-      this.renderNavigation();
-      this.renderHero();
-      this.renderAbout();
-      this.renderFields();
-      this.renderMembers();
-      this.renderResearch();
-      this.renderPublications();
-      this.renderContact();
-      this.renderFooter();
-
-      console.log('All data loaded and rendered successfully');
+      if (this.data) {
+        this.renderAll();
+        console.log('All data loaded and rendered successfully');
+      }
+    } finally {
+      // Reveal the content once it is populated (or even if loading failed, so
+      // the page never gets stuck hidden behind the loading state).
+      document.body.classList.remove('is-loading');
     }
   }
 }
@@ -815,7 +851,7 @@ function initLanguageToggle() {
   updateButtonText();
 
   // Toggle language on button click
-  langToggle.addEventListener('click', async () => {
+  langToggle.addEventListener('click', () => {
     const currentLang = localStorage.getItem('language') || 'en';
     const newLang = currentLang === 'en' ? 'zh' : 'en';
 
@@ -825,22 +861,13 @@ function initLanguageToggle() {
     // Update button text
     updateButtonText();
 
-    // Reload content with new language
+    // Re-project the cached bilingual data onto the new language and
+    // re-render — no network request needed.
     loader.language = newLang;
-    await loader.loadData();
+    loader.applyLanguage();
 
     if (loader.data) {
-      loader.renderSite();
-      loader.renderNavigation();
-      loader.renderHero();
-      loader.renderAbout();
-      loader.renderFields();
-      loader.renderMembers();
-      loader.renderResearch();
-      loader.renderPublications();
-      loader.renderContact();
-      loader.renderFooter();
-
+      loader.renderAll();
       console.log(`Content reloaded in ${newLang === 'en' ? 'English' : 'Chinese'}`);
     }
   });

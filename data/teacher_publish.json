@@ -2,7 +2,11 @@
   "conference_papers": [
     {
       "title": "On relating one-way classical and quantum communication complexities",
-      "authors": ["Naresh Goud Boddu", "Rahul Jain", "Han-Hsuan Lin"],
+      "authors": [
+        "Naresh Goud Boddu",
+        "Rahul Jain",
+        "Han-Hsuan Lin"
+      ],
       "year": 2021,
       "arXiv_id": "2107.11623",
       "url": "https://arxiv.org/abs/2107.11623",
@@ -10,7 +14,10 @@
     },
     {
       "title": "On the Sample Complexity of PAC Learning Quantum Process",
-      "authors": ["Kai-Min Chung", "Han-Hsuan Lin"],
+      "authors": [
+        "Kai-Min Chung",
+        "Han-Hsuan Lin"
+      ],
       "year": 2018,
       "arXiv_id": "1810.10938",
       "url": "https://arxiv.org/abs/1810.10938",
@@ -18,7 +25,13 @@
     },
     {
       "title": "On the Quantum Complexity of Closest Pair and Related Problems",
-      "authors": ["Scott Aaronson", "Nai-Hui Chia", "Han-Hsuan Lin", "Chunhao Wang", "Ruizhe Zhang"],
+      "authors": [
+        "Scott Aaronson",
+        "Nai-Hui Chia",
+        "Han-Hsuan Lin",
+        "Chunhao Wang",
+        "Ruizhe Zhang"
+      ],
       "year": 2019,
       "arXiv_id": "1911.01973",
       "url": "https://arxiv.org/abs/1911.01973",
@@ -26,7 +39,14 @@
     },
     {
       "title": "Sampling-based sublinear low-rank matrix arithmetic framework for dequantizing quantum machine learning",
-      "authors": ["Nai-Hui Chia", "András Gilyén", "Tongyang Li", "Han-Hsuan Lin", "Ewin Tang", "Chunhao Wang"],
+      "authors": [
+        "Nai-Hui Chia",
+        "András Gilyén",
+        "Tongyang Li",
+        "Han-Hsuan Lin",
+        "Ewin Tang",
+        "Chunhao Wang"
+      ],
       "year": 2019,
       "arXiv_id": "1910.06151",
       "url": "https://arxiv.org/abs/1910.06151",
@@ -34,7 +54,12 @@
     },
     {
       "title": "Quantum-inspired classical sublinear-time algorithm for solving low-rank semidefinite programming via sampling approaches",
-      "authors": ["Nai-Hui Chia", "Tongyang Li", "Han-Hsuan Lin", "Chunhao Wang"],
+      "authors": [
+        "Nai-Hui Chia",
+        "Tongyang Li",
+        "Han-Hsuan Lin",
+        "Chunhao Wang"
+      ],
       "year": 2019,
       "arXiv_id": "1901.03254",
       "url": "https://arxiv.org/abs/1901.03254",
@@ -42,7 +67,11 @@
     },
     {
       "title": "Quantum-inspired sublinear classical algorithms for solving low-rank linear systems",
-      "authors": ["Nai-Hui Chia", "Han-Hsuan Lin", "Chunhao Wang"],
+      "authors": [
+        "Nai-Hui Chia",
+        "Han-Hsuan Lin",
+        "Chunhao Wang"
+      ],
       "year": 2018,
       "arXiv_id": "1811.04852",
       "url": "https://arxiv.org/abs/1811.04852",
@@ -50,7 +79,12 @@
     },
     {
       "title": "A Quantum-Proof Non-Malleable Extractor, With Application to Privacy Amplification against Active Quantum Adversaries",
-      "authors": ["Divesh Aggarwal", "Kai-Min Chung", "Han-Hsuan Lin", "Thomas Vidick"],
+      "authors": [
+        "Divesh Aggarwal",
+        "Kai-Min Chung",
+        "Han-Hsuan Lin",
+        "Thomas Vidick"
+      ],
       "year": 2017,
       "arXiv_id": "1710.00557",
       "url": "https://arxiv.org/abs/1710.00557",
@@ -58,7 +92,10 @@
     },
     {
       "title": "Upper bounds on quantum query complexity inspired by the Elitzur-Vaidman bomb tester",
-      "authors": ["Chi-Yuan-Yi Lin", "Han-Hsuan Lin"],
+      "authors": [
+        "Chi-Yuan-Yi Lin",
+        "Han-Hsuan Lin"
+      ],
       "year": 2016,
       "arXiv_id": "1410.0932",
       "url": "https://arxiv.org/abs/1410.0932",
@@ -66,7 +103,11 @@
     },
     {
       "title": "Oracles with costs",
-      "authors": ["Shelby Kimmel", "Chi-Yuan-Yi Lin", "Han-Hsuan Lin"],
+      "authors": [
+        "Shelby Kimmel",
+        "Chi-Yuan-Yi Lin",
+        "Han-Hsuan Lin"
+      ],
       "year": 2015,
       "arXiv_id": "1502.02174",
       "url": "https://arxiv.org/abs/1502.02174",
@@ -76,14 +117,25 @@
   "preprints": [
     {
       "title": "Constant-round Blind Classical Verification of Quantum Sampling",
-      "authors": ["Kai-Min Chung", "Yi Lee", "Han-Hsuan Lin", "Xiaodi Wu"],
+      "authors": [
+        "Kai-Min Chung",
+        "Yi Lee",
+        "Han-Hsuan Lin",
+        "Xiaodi Wu"
+      ],
       "year": 2020,
       "arXiv_id": "2012.04848",
       "url": "https://arxiv.org/abs/2012.04848"
     },
     {
       "title": "Different strategies for optimization using the quantum adiabatic algorithm",
-      "authors": ["E. Crosson", "E. Farhi", "Chi-Yuan-Yi Lin", "Han-Hsuan Lin", "Peter Shor"],
+      "authors": [
+        "E. Crosson",
+        "E. Farhi",
+        "Chi-Yuan-Yi Lin",
+        "Han-Hsuan Lin",
+        "Peter Shor"
+      ],
       "year": 2014,
       "arXiv_id": "1401.7320",
       "url": "https://arxiv.org/abs/1401.7320"
