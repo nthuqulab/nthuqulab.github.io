@@ -61,8 +61,9 @@ npm install      # first time
 npm run build    # content/*.md → data/*.json
 ```
 
-`scripts/build-data.mjs` parses YAML frontmatter with `gray-matter`. GitHub
-Actions runs the build on every push/PR to `main` and deploys to GitHub Pages.
+`scripts/build-data.mjs` parses the readable Markdown sources (headings +
+`- **Label:** value` bullets; bilingual values written `English | 中文`) into
+JSON. GitHub Actions runs the build on every push/PR to `main` and deploys.
 
 ## Adding a new section
 
