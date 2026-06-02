@@ -1,0 +1,110 @@
+{
+  "sectionTitle": "成員",
+  "description": "量子計算實驗室的團隊成員。",
+  "tabs": {
+    "all": "全部",
+    "current": "現任",
+    "past": "歷屆"
+  },
+  "items": [
+    {
+      "name": "林瀚仚",
+      "position": "指導教授",
+      "image": "assets/img/person/advisor.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": true,
+      "tag": "current"
+    },
+    {
+      "name": "曾冠富",
+      "position": "碩士生",
+      "image": "assets/img/person/kft.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "林奕辰",
+      "position": "碩士生",
+      "image": "assets/img/person/AlbertLin.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "李為新",
+      "position": "碩士生",
+      "image": "assets/img/person/whl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "周証恩",
+      "position": "碩士生",
+      "image": "assets/img/person/cec.avif",
+      "bias": [
+        0,
+        100
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "李威辰",
+      "position": "碩士生",
+      "image": "assets/img/person/wcl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "蕭登鴻",
+      "position": "專題生",
+      "image": "assets/img/person/dhh.avif",
+      "bias": [
+        0,
+        -20
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "吳旻樺",
+      "position": "專題生",
+      "image": "assets/img/person/yhw.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "林哲宇",
+      "position": "專題生",
+      "image": "assets/img/person/zyl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    }
+  ]
+}

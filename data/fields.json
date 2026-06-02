@@ -1,0 +1,38 @@
+{
+  "sectionTitle": "Fields",
+  "description": "We specialize in various fields to deliver the best solutions.",
+  "tabs": [
+    {
+      "id": "fields-tab-1",
+      "icon": "bi-diagram-3",
+      "title": "Complexity",
+      "subtitle": "complexity study on state-of-the-art systems",
+      "fullTitle": "Quantum Complexity",
+      "description": "We study the complexity of state-of-the-art quantum systems, analyzing how algorithms can be solved under current resources such as higher error rate or restricted depth. Understanding computational complexity helps us identify which problems can benefit most from quantum acceleration."
+    },
+    {
+      "id": "fields-tab-2",
+      "icon": "bi-sliders",
+      "title": "Optimization",
+      "subtitle": "optimization of quantum algorithms",
+      "fullTitle": "Optimization",
+      "description": "Our research focuses on optimizing quantum algorithms and circuits to reduce error rates, improve efficiency, and minimize resource usage. This involves both theoretical methods and practical implementation strategies to make quantum solutions more reliable and scalable."
+    },
+    {
+      "id": "fields-tab-3",
+      "icon": "bi-shuffle",
+      "title": "Random Unitary",
+      "subtitle": "pseudorandom unitary for quantum computing",
+      "fullTitle": "Random Unitary",
+      "description": "We explore pseudorandom unitary operations, essential for simulating complex quantum dynamics and benchmarking devices. These operations help test randomness, entanglement, and information scrambling in quantum systems."
+    },
+    {
+      "id": "fields-tab-4",
+      "icon": "bi-shield-lock",
+      "title": "Cryptography",
+      "subtitle": "cryptography and secure communication",
+      "fullTitle": "Cryptography",
+      "description": "We investigate quantum cryptography and secure communication protocols, such as quantum key distribution and post-quantum encryption. Our goal is to ensure data security in a future where quantum computers can break classical cryptosystems."
+    }
+  ]
+}

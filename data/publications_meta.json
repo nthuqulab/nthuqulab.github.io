@@ -1,0 +1,12 @@
+{
+  "sectionTitle": "Publications",
+  "title": "Teacher Publications",
+  "description": "Explore the research publications and academic contributions from our faculty, including conference papers, journal articles, and preprints in quantum computing and related fields.",
+  "tabs": {
+    "all": "All Publications",
+    "conference": "Conference Papers",
+    "preprints": "Preprints"
+  },
+  "searchPlaceholder": "Search by title, author, or venue...",
+  "loadingText": "Loading publications..."
+}

@@ -1,0 +1,12 @@
+{
+  "sectionTitle": "論文發表",
+  "title": "教師論文發表",
+  "description": "探索我們教師的研究發表和學術貢獻，包括會議論文、期刊文章以及量子計算相關領域的預印本。",
+  "tabs": {
+    "all": "全部論文",
+    "conference": "會議論文",
+    "preprints": "預印本"
+  },
+  "searchPlaceholder": "以標題、作者或發表場合搜尋...",
+  "loadingText": "載入論文中..."
+}

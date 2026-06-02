@@ -1,0 +1,9 @@
+[
+  { "label": "Home", "href": "#hero", "active": true },
+  { "label": "About", "href": "#about", "active": false },
+  { "label": "Fields", "href": "#fields", "active": false },
+  { "label": "Members", "href": "#members", "active": false },
+  { "label": "Research", "href": "#research", "active": false },
+  { "label": "Publications", "href": "#publications", "active": false },
+  { "label": "Contact", "href": "#contact", "active": false }
+]

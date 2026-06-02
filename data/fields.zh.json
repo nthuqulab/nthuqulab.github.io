@@ -1,0 +1,38 @@
+{
+  "sectionTitle": "研究領域",
+  "description": "我們專注於多個研究領域，提供最佳解決方案。",
+  "tabs": [
+    {
+      "id": "fields-tab-1",
+      "icon": "bi-diagram-3",
+      "title": "複雜度",
+      "subtitle": "最新系統的複雜度研究",
+      "fullTitle": "量子複雜度",
+      "description": "我們研究最先進量子系統的複雜度，並分析在當前可用資源（例如較高的錯誤率或受限的電路深度）下，演算法如何被實現。透過理解計算複雜度，我們能辨識哪些問題最能從量子加速中受惠。"
+    },
+    {
+      "id": "fields-tab-2",
+      "icon": "bi-sliders",
+      "title": "最佳化",
+      "subtitle": "量子演算法的最佳化",
+      "fullTitle": "最佳化",
+      "description": "我們的研究專注於最佳化量子演算法與量子電路，以降低錯誤率、提升效率並減少資源使用。這同時涉及理論方法與實作策略，旨在使量子解決方案更加可靠且具可擴展性。"
+    },
+    {
+      "id": "fields-tab-3",
+      "icon": "bi-shuffle",
+      "title": "隨機酉矩陣",
+      "subtitle": "量子計算的偽隨機酉矩陣",
+      "fullTitle": "隨機酉矩陣",
+      "description": "我們研究偽隨機酉操作，這對模擬複雜量子動力學及量子裝置效能評估至關重要。這些操作有助於檢測量子系統中的隨機性、糾纏以及資訊擾動（information scrambling）。"
+    },
+    {
+      "id": "fields-tab-4",
+      "icon": "bi-shield-lock",
+      "title": "密碼學",
+      "subtitle": "密碼學與安全通訊",
+      "fullTitle": "密碼學",
+      "description": "我們研究量子密碼學與安全通訊協議，如量子密鑰分發與後量子加密。目標是在量子電腦能破解經典密碼系統的未來，確保資料安全。"
+    }
+  ]
+}

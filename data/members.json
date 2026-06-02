@@ -1,0 +1,111 @@
+{
+  "sectionTitle": "Members",
+  "description": "Current team members of our quantum computing lab.",
+  "tabs": {
+    "all": "All",
+    "current": "Current",
+    "past": "Past"
+  },
+  "items": [
+    {
+      "name": "Han-Hsuan Lin",
+      "position": "Advisor",
+      "image": "assets/img/person/advisor.avif",
+      "link": "https://sites.google.com/view/han-hsuan-lins-homepage/home",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": true,
+      "tag": "current"
+    },
+    {
+      "name": "Kuan-Fu Tseng",
+      "position": "Master Student",
+      "image": "assets/img/person/kft.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Albert Lin",
+      "position": "Master Student",
+      "image": "assets/img/person/AlbertLin.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Wei-Hsin Li",
+      "position": "Master Student",
+      "image": "assets/img/person/whl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Cheng-En Chou",
+      "position": "Master Student",
+      "image": "assets/img/person/cec.avif",
+      "bias": [
+        0,
+        100
+      ],
+      "highlight": false,
+      "tag": "current"
+    },
+    {
+      "name": "Wei-Chen Li",
+      "position": "Master Student",
+      "image": "assets/img/person/wcl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "Darren Hsiou",
+      "position": "Undergraduate Student",
+      "image": "assets/img/person/dhh.avif",
+      "bias": [
+        0,
+        -20
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "Min-Hua Wu",
+      "position": "Undergraduate Student",
+      "image": "assets/img/person/yhw.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    },
+    {
+      "name": "Che-Yu Lin",
+      "position": "Undergraduate Student",
+      "image": "assets/img/person/zyl.avif",
+      "bias": [
+        0,
+        0
+      ],
+      "highlight": false,
+      "tag": "past"
+    }
+  ]
+}

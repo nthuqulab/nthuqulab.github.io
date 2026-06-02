@@ -1,0 +1,9 @@
+[
+  { "label": "首頁", "href": "#hero", "active": true },
+  { "label": "關於我們", "href": "#about", "active": false },
+  { "label": "研究領域", "href": "#fields", "active": false },
+  { "label": "成員", "href": "#members", "active": false },
+  { "label": "研究成果", "href": "#research", "active": false },
+  { "label": "論文發表", "href": "#publications", "active": false },
+  { "label": "聯絡我們", "href": "#contact", "active": false }
+]
