@@ -97,11 +97,17 @@ There are **no** `*.zh.json` files anymore — both languages live side by side.
 
 ### Members, faculty publications, student theses (Markdown)
 
-Edit the relevant file in `content/` — each uses YAML frontmatter:
+Edit the relevant file in `content/`. These are written as **readable Markdown** — open the file on GitHub and the rendered preview shows each item as a heading with its photo and fields, so you can confirm at a glance that your edit is correct. Conventions:
 
-- **`content/members.md`** — `sectionTitle`, `description`, `tabs` (bilingual) plus an `items` list. Each member has bilingual `name`/`position`, an `image` (the member photo → the site's `image` field), `bias` (`[x, y]` object-position %), `highlight`, `tag` (`current`/`past`), and an optional `link`. The `image` accepts a local path/URL **or** a pasted GitHub image tag — wrap it in single quotes and the build extracts the URL: `image: '<img ... src="https://github.com/user-attachments/assets/..." />'`.
-- **`content/publications.md`** — an `items` list; set `category` to `conference` or `preprint`. Titles/authors are language-neutral plain strings. Quote `arXiv_id` to keep it a string.
-- **`content/research.md`** — an `items` list of theses (`title`, `author`, `advisor`, `year`, `download_link`).
+- Each item is a heading: `## Name | 中文姓名` (members) or `### Title | 中文標題` (papers / theses).
+- **Bilingual text** is written `English | 中文`. A value with no `|` is used for both languages. (Full-width `｜` is also accepted.)
+- **Fields** are bullets, `- **Label:** value`. Labels are matched by keyword, so `**Position 職稱:**` and `**Position:**` both work.
+
+Per file:
+
+- **`content/members.md`** — a small header (section title / description / tab labels), then one `## Name | 中文姓名` block per member with a photo and these fields: `Position`, `Tag` (`current`/`past`), `Highlight` (`yes`/`no`), `Bias` (`x, y` photo offset in %), and an optional `Link`.
+- **`content/publications.md`** — `## Conference Papers` / `## Preprints` sections, each with `### Paper Title` blocks and fields: `Authors` (comma-separated), `Year`, `arXiv`, `URL`, optional `Venue`.
+- **`content/research.md`** — one `### English title | 中文標題` block per thesis with fields: `Author`, `Advisor`, `Year`, `Link`.
 
 Then regenerate the JSON:
 
@@ -116,10 +122,10 @@ Edit the relevant bilingual JSON file in `data/`, updating **both** the `en` and
 
 ### Images
 
-Member photos are set in `content/members.md`'s `image` field, which accepts either:
+Member photos are the image under each member in `content/members.md`, written as a normal Markdown image. Either:
 
-- a local file in `assets/img/person/` (AVIF recommended), e.g. `image: assets/img/person/name.avif`; or
-- a pasted GitHub image tag — drag/paste an image into the Markdown editor on GitHub and paste the resulting `<img ... src="https://github.com/user-attachments/assets/..." />` tag (wrapped in single quotes) into the `image` field. The build extracts the URL automatically.
+- a local file in `assets/img/person/` (AVIF recommended), referenced **relative to `content/`** so it renders in the GitHub preview: `![photo](../assets/img/person/name.avif)` (the build strips the `../` for the site); or
+- a pasted GitHub image — drag/paste an image into the Markdown editor on GitHub and keep the `![](...)` or `<img ... src="https://github.com/user-attachments/assets/..." />` it inserts. The build extracts the URL automatically, and it renders in the preview too.
 
 ### Styles
 

@@ -1,129 +1,101 @@
 ---
-# Members section. Compiled to data/members.json by scripts/build-data.mjs.
-# `sectionTitle`, `description` and `tabs` carry bilingual { en, zh } values.
-# `bias` is [x, y] object-position (percent), `tag` is current | past,
-# `link` is optional (opens on click).
-#
-# PHOTOS — the `image` field accepts EITHER:
-#   1. a local path / URL, e.g.  image: assets/img/person/advisor.avif
-#   2. a pasted GitHub image tag (what you get when you paste/drag an image
-#      into the GitHub Markdown editor). Wrap it in single quotes so the
-#      double quotes inside stay valid YAML — the build extracts the src URL:
-#
-#      image: '<img width="385" height="203" alt="image" src="https://github.com/user-attachments/assets/7c75f767-36f7-480f-881a-0734d17c8cdc" />'
-sectionTitle:
-  en: Members
-  zh: 成員
-description:
-  en: Current team members of our quantum computing lab.
-  zh: 量子計算實驗室的團隊成員。
+sectionTitle: Members | 成員
+description: Current team members of our quantum computing lab. | 量子計算實驗室的團隊成員。
 tabs:
-  all:
-    en: All
-    zh: 全部
-  current:
-    en: Current
-    zh: 現任
-  past:
-    en: Past
-    zh: 歷屆
-items:
-  - name:
-      en: Han-Hsuan Lin
-      zh: 林瀚仚
-    position:
-      en: Advisor
-      zh: 指導教授
-    image: assets/img/person/advisor.avif
-    link: https://sites.google.com/view/han-hsuan-lins-homepage/home
-    bias: [0, 0]
-    highlight: true
-    tag: current
-  - name:
-      en: Kuan-Fu Tseng
-      zh: 曾冠富
-    position:
-      en: Master Student
-      zh: 碩士生
-    image: assets/img/person/kft.avif
-    bias: [0, 0]
-    highlight: false
-    tag: current
-  - name:
-      en: Albert Lin
-      zh: 林奕辰
-    position:
-      en: Master Student
-      zh: 碩士生
-    image: assets/img/person/AlbertLin.avif
-    bias: [0, 0]
-    highlight: false
-    tag: current
-  - name:
-      en: Wei-Hsin Li
-      zh: 李為新
-    position:
-      en: Master Student
-      zh: 碩士生
-    image: assets/img/person/whl.avif
-    bias: [0, 0]
-    highlight: false
-    tag: current
-  - name:
-      en: Cheng-En Chou
-      zh: 周証恩
-    position:
-      en: Master Student
-      zh: 碩士生
-    image: assets/img/person/cec.avif
-    bias: [0, 100]
-    highlight: false
-    tag: current
-  - name:
-      en: Wei-Chen Li
-      zh: 李威辰
-    position:
-      en: Master Student
-      zh: 碩士生
-    image: assets/img/person/wcl.avif
-    bias: [0, 0]
-    highlight: false
-    tag: past
-  - name:
-      en: Darren Hsiou
-      zh: 蕭登鴻
-    position:
-      en: Undergraduate Student
-      zh: 專題生
-    image: assets/img/person/dhh.avif
-    bias: [0, -20]
-    highlight: false
-    tag: past
-  - name:
-      en: Min-Hua Wu
-      zh: 吳旻樺
-    position:
-      en: Undergraduate Student
-      zh: 專題生
-    image: assets/img/person/yhw.avif
-    bias: [0, 0]
-    highlight: false
-    tag: past
-  - name:
-      en: Che-Yu Lin
-      zh: 林哲宇
-    position:
-      en: Undergraduate Student
-      zh: 專題生
-    image: assets/img/person/zyl.avif
-    bias: [0, 0]
-    highlight: false
-    tag: past
+  all: All | 全部
+  current: Current | 現任
+  past: Past | 歷屆
 ---
 
+# Members | 成員
+
 <!--
-Add or edit lab members above. Each entry needs a name (en/zh), position
-(en/zh), an image path under assets/img/person/, a bias offset, a highlight
-flag, and a tag (current/past). Run `npm run build` to regenerate
-data/members.json before previewing locally.
+維護說明 / How to edit:
+• 每位成員 = 一個「## English Name | 中文姓名」區塊。
+• 照片：用 ![photo](路徑) 或直接貼上 GitHub 圖片 <img src="...">。在 GitHub 預覽此檔會看到照片，確認沒貼錯。
+• 雙語欄位寫成「English | 中文」；沒有「|」代表中英共用。
+• Position 職稱、Tag 分類(current 現任 / past 歷屆)、Highlight 強調(yes/no)、
+  Bias 照片位置(x, y 百分比)、Link 個人連結(可省略)。
 -->
+
+## Han-Hsuan Lin | 林瀚仚
+
+![photo](../assets/img/person/advisor.avif)
+
+- **Position 職稱:** Advisor | 指導教授
+- **Tag 分類:** current
+- **Highlight 強調:** yes
+- **Bias 照片位置:** 0, 0
+- **Link 個人連結:** https://sites.google.com/view/han-hsuan-lins-homepage/home
+
+## Kuan-Fu Tseng | 曾冠富
+
+![photo](../assets/img/person/kft.avif)
+
+- **Position 職稱:** Master Student | 碩士生
+- **Tag 分類:** current
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
+
+## Albert Lin | 林奕辰
+
+![photo](../assets/img/person/AlbertLin.avif)
+
+- **Position 職稱:** Master Student | 碩士生
+- **Tag 分類:** current
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
+
+## Wei-Hsin Li | 李為新
+
+![photo](../assets/img/person/whl.avif)
+
+- **Position 職稱:** Master Student | 碩士生
+- **Tag 分類:** current
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
+
+## Cheng-En Chou | 周証恩
+
+![photo](../assets/img/person/cec.avif)
+
+- **Position 職稱:** Master Student | 碩士生
+- **Tag 分類:** current
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 100
+
+## Wei-Chen Li | 李威辰
+
+![photo](../assets/img/person/wcl.avif)
+
+- **Position 職稱:** Master Student | 碩士生
+- **Tag 分類:** past
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
+
+## Darren Hsiou | 蕭登鴻
+
+![photo](../assets/img/person/dhh.avif)
+
+- **Position 職稱:** Undergraduate Student | 專題生
+- **Tag 分類:** past
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, -20
+
+## Min-Hua Wu | 吳旻樺
+
+![photo](../assets/img/person/yhw.avif)
+
+- **Position 職稱:** Undergraduate Student | 專題生
+- **Tag 分類:** past
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
+
+## Che-Yu Lin | 林哲宇
+
+![photo](../assets/img/person/zyl.avif)
+
+- **Position 職稱:** Undergraduate Student | 專題生
+- **Tag 分類:** past
+- **Highlight 強調:** no
+- **Bias 照片位置:** 0, 0
